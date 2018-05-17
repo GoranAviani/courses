@@ -1,0 +1,1 @@
+This repository contains solutions for the Python Jumpstart by Building 10 Apps course.
