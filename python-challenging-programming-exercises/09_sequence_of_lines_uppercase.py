@@ -14,7 +14,6 @@ result=""
 def capitalized_characters(sentence):
     return(sentence.upper())
 
-
 while True:
 
     userInput = input ("Enter sentence or E[x]it: ")
