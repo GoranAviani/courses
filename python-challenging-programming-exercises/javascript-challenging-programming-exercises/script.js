@@ -213,12 +213,19 @@ console.log(array2D("3,5"))
 # Hints:
 # In case of input data being supplied to the question, it should be assumed to be a console input.
 */
+
 /*
+function inputConsole(event) {
+    //prevent Default to prevent quick refresh of the page
+  event.preventDefault();
+  var data = document.getElementById("userInfoData");
+  console.log(data.value);
+  console.log(sorting(data.value))
+}
+
+
 function sorting(text){
     text = text.split(",");
     return text.sort()
-
 }
-
-console.log(sorting("without,hello,bag,world"))
 */
