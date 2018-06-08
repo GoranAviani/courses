@@ -229,3 +229,34 @@ function sorting(text){
     return text.sort()
 }
 */
+
+/*
+# Question 9
+# Level 2
+# Write a program that accepts sequence of lines as input and prints the lines after making all characters in the sentence capitalized.
+# Suppose the following input is supplied to the program:
+# Hello world
+# Practice makes perfect
+# Then, the output should be:
+# HELLO WORLD
+# PRACTICE MAKES PERFECT
+# Hints:
+# In case of input data being supplied to the question, it should be assumed to be a console input.
+*/
+/*
+function inputConsole(event){
+    event.preventDefault();
+    let inputUser = document.getElementById("userInfoData");
+    inputUser = inputUser.value;
+
+    result = inputUser.split(',');
+    console.log(result.length)
+
+    let i;
+    for (i = 0; i < result.length; i++){
+        console.log(result[i].toUpperCase())
+
+    }
+}
+*/
+
