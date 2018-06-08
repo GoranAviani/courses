@@ -294,5 +294,42 @@ function inputConsole(event){
 
 */
 
+/*
+# Question 11
+# Level 2
+# Question:
+# Write a program which accepts a sequence of comma separated 4 digit binary numbers as its input and then check whether they are
+# divisible by 5 or not. The numbers that are divisible by 5 are to be printed in a comma separated sequence.
+# Example:
+# 0100,0011,1010,1001
+# Then the output should be:
+# 1010
+# Notes: Assume the data is input by console.
+# Hints:
+# In case of input data being supplied to the question, it should be assumed to be a console input.
+*/
 
+/*
+function checkIfDivisable(number){
+   if (parseInt(number,2) % 5 === 0){
+        return(number)
+    }
+}
+
+
+function inputConsole(event){
+    event.preventDefault();
+    let inputUser = document.getElementById("userInfoData");
+
+    console.log(inputUser.value)
+    inputUser = inputUser.value
+    inputUser = inputUser.split(",");
+
+    let i;
+    for (i = 0; i<inputUser.length; i++){
+        console.log(checkIfDivisable(inputUser[i]));
+    }
+
+}
+*/
 
