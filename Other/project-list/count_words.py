@@ -1,3 +1,5 @@
+#Count Words in a String - Counts the number of individual words in a string.
+#  For added complexity read these strings in from a text file and generate a summary
 
 def counter(userInput):
     userInput = userInput.split(" ")
@@ -31,7 +33,7 @@ def main():
             sums = total_words(result)
 
         print(result)
-        print(int(sums))
+        print("Total number of words: " + str(sums))
 
 
 if __name__ == "__main__":
