@@ -333,3 +333,38 @@ function inputConsole(event){
 }
 */
 
+/*
+# Question 12
+# Level 2
+# Question:
+# Write a program, which will find all such numbers between 1000 and 3000 (both included) such that each digit of the number is an
+# even number.
+# The numbers obtained should be printed in a comma-separated sequence on a single line.
+# Hints:
+# In case of input data being supplied to the question, it should be assumed to be a console input.
+*/
+
+
+let i;
+let x;
+let result = [];
+let isEven = false;
+for (i=1; i<3001;i++){
+    isEven = true;
+
+    for (x = 0; x < i.toString().length; x++){
+        console.log(i)
+        if (i[x] % 2 == 0){
+            console.log("ok")
+        }else{
+            console.log("neok")
+            isEven = false;
+        }
+    }
+
+    if (isEven = true) {
+        result.push(i);
+    }
+}
+
+//console.log(result)
