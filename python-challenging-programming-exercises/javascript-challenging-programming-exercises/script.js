@@ -485,6 +485,37 @@ function inputConsole(event) {
 }
 */
 
+/*
+# Question 16
+# Level 2
+# Question:
+# Use a list comprehension to square each odd number in a list. The list is input by a sequence of comma-separated numbers.
+# Suppose the following input is supplied to the program:
+# 1,2,3,4,5,6,7,8,9
+# Then, the output should be:
+# 1,3,5,7,9 and 1,9,25,49,81
+*/
+/*
+function inputConsole(event){
+    event.preventDefault();
+    let userInput = document.getElementById("userInfoData");
+    userInput = userInput.value;
+    userInput = userInput.split(",");
 
+    let x;
+    let resultNumber = [];
+    let resultNUmberSquare = [];
+    console.log(userInput);
+
+    for (x = 0; x < userInput.length; x++){
+        if (userInput[x] % 2 != 0){
+            resultNumber.push(userInput[x])
+            resultNUmberSquare.push(parseInt(userInput[x]) **2)
+        }
+    }
+    console.log(resultNumber.toString() + " and " +resultNUmberSquare.toString())
+
+}
+*/
 
 
