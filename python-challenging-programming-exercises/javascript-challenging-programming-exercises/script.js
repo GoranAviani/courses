@@ -459,4 +459,32 @@ function inputConsole(event){
 
 */
 
+/*
+# Question 15
+# Level 2
+# Question:
+# Write a program that computes the value of a+aa+aaa+aaaa with a given digit as the value of a.
+# Suppose the following input is supplied to the program:
+# 9
+# Then, the output should be:
+# 11106
+# Hints:
+# In case of input data being supplied to the question, it should be assumed to be a console input.
+*/
+
+/*
+function inputConsole(event) {
+    event.preventDefault();
+    let userInput = document.getElementById("userInfoData");
+    userInput = userInput.value;
+
+    result = parseInt(userInput) + parseInt(userInput + userInput)
+        + parseInt(userInput+userInput+userInput) + parseInt(userInput+userInput+userInput+userInput);
+
+    console.log("resultat " + result)
+}
+*/
+
+
+
 
