@@ -517,5 +517,77 @@ function inputConsole(event){
 
 }
 */
+/*
+# Question 18
+# Level 3
+# Question:
+# A website requires the users to input username and password to register.
+# Write a program to check the validity of password input by users.
+# Following are the criteria for checking the password:
+# 1. At least 1 letter between [a-z]
+# 2. At least 1 number between [0-9]
+# 1. At least 1 letter between [A-Z]
+# 3. At least 1 character from [$#@]
+# 4. Minimum length of transaction password: 6
+# 5. Maximum length of transaction password: 12
+# Your program should accept a sequence of comma separated passwords and will check them according to the above criteria.
+# Passwords that match the criteria are to be printed, each separated by a comma.
+# Example
+# If the following passwords are given as input to the program:
+# ABd1234@1,a F1#,2w3E*,2We3345
+# Then, the output of the program should be:
+# ABd1234@1
+# Hints:
+# In case of input data being supplied to the question, it should be assumed to be a console input.
+*/
+/*
+function inputConsole(event) {
+    event.preventDefault();
+    let userInput = document.getElementById("userInfoData");
+    userInput = userInput.value;
+
+    console.log(userInput)
+    let x;
+    let hasLowecase = false;
+    let hasUppersase = false;
+    let hasNumber = false;
+    let hasSpecialCharacter = false;
+    const specialChar = /^[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
+
+
+    if (userInput.length < 6 || userInput.length > 12) {
+        console.log("Password must have from 6 to 12 characters")
+    } else {
+
+        for (x = 0; x < userInput.length; x++) {
+            console.log(userInput)
+            if (/^[a-z]/.test(userInput[x])) {
+                hasLowecase = true;
+            }
+
+            if (/^[A-Z]/.test(userInput[x])) {
+                hasUppersase = true;
+            }
+
+            if (/^[1-9]/.test(userInput[x])) {
+                hasNumber = true;
+            }
+
+            if (userInput[x].match(specialChar)) {
+                hasSpecialCharacter = true;
+            }
+        }
+    }
+
+
+    if (hasLowecase == true && hasUppersase == true && hasNumber == true && hasSpecialCharacter == true) {
+        console.log("Password is ok")
+    } else{
+        console.log("Password is not ok")
+    }
+}
+
+*/
+
 
 
