@@ -376,3 +376,45 @@ function inputConsole(event) {
     console.log(result.toString())
 }
 */
+
+/*
+# Question 13
+# Level 2
+# Question:
+# Write a program that accepts a sentence and calculate the number of letters and digits.
+# Suppose the following input is supplied to the program:
+# hello world! 123
+# Then, the output should be:
+# LETTERS 10
+# DIGITS 3
+# Hints:
+# In case of input data being supplied to the question, it should be assumed to be a console input.
+*/
+
+/*
+function inputConsole(event){
+    event.preventDefault();
+    let numbers = 0;
+    let letters = 0;
+
+    let x;
+    let userInput = document.getElementById("userInfoData")
+
+
+    for (x = 0; x < userInput.value.length; x++) {
+       // console.log(userInput.value[x])
+
+            if (/^[a-zA-Z]/.test(userInput.value[x])){
+            letters += 1;
+            }else if (/^[1-9]/.test(userInput.value[x])){
+            numbers +=1;
+            }
+    }
+
+
+    console.log("LETTERS "+letters)
+    console.log("NUMBERS "+numbers)
+
+}
+
+*/
