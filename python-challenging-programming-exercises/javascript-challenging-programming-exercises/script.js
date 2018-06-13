@@ -540,54 +540,62 @@ function inputConsole(event){
 # Hints:
 # In case of input data being supplied to the question, it should be assumed to be a console input.
 */
+
 /*
 function inputConsole(event) {
     event.preventDefault();
     let userInput = document.getElementById("userInfoData");
     userInput = userInput.value;
 
-    console.log(userInput)
+    userInput = userInput.split(",");
+
     let x;
     let hasLowecase = false;
     let hasUppersase = false;
     let hasNumber = false;
     let hasSpecialCharacter = false;
+    let result = []
     const specialChar = /^[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
 
+    for (i = 0; i < userInput.length; i++) {
+        hasLowecase = false;
+        hasUppersase = false;
+        hasNumber = false;
+        hasSpecialCharacter = false;
+        //console.log(userInput[i])
 
-    if (userInput.length < 6 || userInput.length > 12) {
-        console.log("Password must have from 6 to 12 characters")
-    } else {
+        if (userInput[i].length < 6 || userInput[i].length > 12) {
+            console.log("Password must have from 6 to 12 characters")
+        } else {
 
-        for (x = 0; x < userInput.length; x++) {
-            console.log(userInput)
-            if (/^[a-z]/.test(userInput[x])) {
-                hasLowecase = true;
-            }
+            for (x = 0; x < userInput[i].length; x++) {
 
-            if (/^[A-Z]/.test(userInput[x])) {
-                hasUppersase = true;
-            }
+                if (/^[a-z]/.test(userInput[i][x])) {
+                    hasLowecase = true;
+                }
 
-            if (/^[1-9]/.test(userInput[x])) {
-                hasNumber = true;
-            }
+                if (/^[A-Z]/.test(userInput[i][x])) {
+                    hasUppersase = true;
+                }
 
-            if (userInput[x].match(specialChar)) {
-                hasSpecialCharacter = true;
+                if (/^[1-9]/.test(userInput[i][x])) {
+                    hasNumber = true;
+                }
+
+                if (userInput[i][x].match(specialChar)) {
+                    hasSpecialCharacter = true;
+                }
             }
         }
-    }
 
 
-    if (hasLowecase == true && hasUppersase == true && hasNumber == true && hasSpecialCharacter == true) {
-        console.log("Password is ok")
-    } else{
-        console.log("Password is not ok")
+        if (hasLowecase == true && hasUppersase == true && hasNumber == true && hasSpecialCharacter == true) {
+            result.push(userInput[i])
+        }
     }
+    console.log(result)
+
 }
-
 */
-
 
 
