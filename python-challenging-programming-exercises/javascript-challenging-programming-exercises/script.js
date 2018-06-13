@@ -343,31 +343,36 @@ function inputConsole(event){
  Hints:
  In case of input data being supplied to the question, it should be assumed to be a console input.
 */
+/*
+function inputConsole(event) {
+    let number;
+    let x;
+    let result = [];
+    let isEven = false;
+
+    event.preventDefault();
+    let inputUser = document.getElementById("userInfoData");
+
+    for (number = 1; number < inputUser.value; number++) {
+        isEven = true;
+        numberString = number.toString()
 
 
-let number;
-let x;
-let result = [];
-let isEven = false;
+        for (x = 0; x < numberString.length; x++) {
+            //console.log(numberString[x])
 
-for (number=1; number<3001;number++){
-    isEven = true;
-    numberString = number.toString()
-
-
-    for (x = 0; x < numberString.length; x++){
-        //console.log(numberString[x])
-
-        if (numberString[x] % 2 == 0){
-            //do nothing here
-        }else{
-            isEven = false;
+            if (numberString[x] % 2 == 0) {
+                //do nothing here
+            } else {
+                isEven = false;
+            }
         }
-    }
 
-    if (isEven === true) {
-        result.push(numberString);
-    }
+        if (isEven === true) {
+            result.push(numberString);
+        }
 
+    }
+    console.log(result.toString())
 }
-console.log(result.toString())
+*/
