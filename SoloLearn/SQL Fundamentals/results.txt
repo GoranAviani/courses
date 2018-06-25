@@ -1,0 +1,51 @@
+Rearrange to select all student names and university names (use left join to show all student names).
+SELECT students.names, universities.names
+FROM students
+LEFT OUTER JOIN universities
+ON students.university_id=universities.id
+
+
+
+Drag and drop from the options below to insert a data item into the ''people'' table.
+INSERT INTO people
+VALUES ('John Smith', '1', 22);
+
+
+Drag and drop from the options below to update the ''people'' table.
+UPDATE people
+SET name='Jordan' 
+WHERE id=147;
+
+
+Fill in the blanks to create a table with two columns: ''id'' as a primary key integer, and ''name'' of type varchar.
+CREATE TABLE(
+ Id int ,
+ Name varchar (30),
+ PRIMARY KEY (id));
+
+Rearrange to remove the column ''age'' from the ''people'' table.
+ALTER TABLE
+people
+DROP COLUMN
+age
+
+
+Which choice is the correct command for changing the name of a table?
+RENAME
+
+
+Drag and drop from the options below to create a view named ''most_abs'' for the students with the greatest number of absences.
+CREATE VIEW most_abs AS
+SELECT id, name, absences
+FROM students 
+ORDER BY absences DESC 
+LIMIT 10;
+
+
+Drag and drop from the options below to delete the table ''students'' from the database.
+DROP TABLE students
+
+
+Drag and drop from the options below to remove the column ''temp'' from the table ''students''.
+ALTER TABLE students
+DROP COLUMN temp
