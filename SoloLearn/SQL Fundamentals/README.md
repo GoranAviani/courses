@@ -1,6 +1,6 @@
 # SQL Fundamentals
 
-An online course at SoloLearn.
+An online SQL course at SoloLearn.
 
 ## About
 
