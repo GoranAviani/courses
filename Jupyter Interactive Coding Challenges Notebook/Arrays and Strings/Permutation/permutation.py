@@ -23,6 +23,6 @@ class Permutation(object):
 
         elif (("".join(set(word1))) == ("".join(set(word2)))):
             return True
-        
+
         else:
             return False
