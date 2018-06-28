@@ -15,10 +15,10 @@ import string_rotation
 class StringRotationTestCase(unittest.TestCase):
 
     def test_is_substring(self):
-        my_permutation = string_rotation.Permutaton()
+        my_permutation = string_rotation.Permutation()
 
-        self.assertEqiual(my_permutation.is_rotation('o', 'oo'), False)
-        self.assertEqiual(my_permutation.is_rotation(None, 'foo'), False)
+        self.assertEqual(my_permutation.is_rotation('o', 'oo'), False)
+        self.assertEqual(my_permutation.is_rotation(None, 'foo'), False)
         self.assertEqual(my_permutation.is_rotation('', 'foo'), False)
-        self.assertEqual(my_permutation.is_rotation('', ''), False)
-        self.assertEqual(my_permutation.is_rotation('foobarbaz', 'barbazfoo'), False)
+        self.assertEqual(my_permutation.is_rotation('', ''), True)
+        self.assertEqual(my_permutation.is_rotation('foobarbaz', 'barbazfoo'), True)
