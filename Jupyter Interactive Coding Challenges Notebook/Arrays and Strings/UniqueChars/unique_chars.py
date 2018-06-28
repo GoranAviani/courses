@@ -10,4 +10,7 @@
 class UniqueChars(object):
 
     def has_unique_char(self, word):
-        pass
+        if word == None:
+            return False
+        elif len(word) == 0:
+            return True
