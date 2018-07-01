@@ -12,6 +12,7 @@ class SumStringsTestCase(unittest.TestCase):
     def test_two_sum(self):
         my_two_sum = two_sum.TwoSum()
 
+        self.assertRaises(TypeError, my_two_sum.calculate_two_sum, None)
         self.assertRaises(ValueError, my_two_sum.calculate_two_sum, [], 0)
         target = 7
         nums = [1, 3, 2, -7, 5]
