@@ -19,4 +19,3 @@ class testingReverseStrings(unittest.TestCase):
         self.assertEqual(my_reverse.reversing_string(None), False)
         self.assertEqual(my_reverse.reversing_string(""), True)
         self.assertEqual(my_reverse.reversing_string(['f', 'o', 'o', ' ', 'b', 'a', 'r']), ['r', 'a', 'b', ' ', 'o', 'o', 'f'])
-      
