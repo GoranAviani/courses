@@ -10,11 +10,14 @@ class TwoSum(object):
 
         else:
             for k, x in enumerate(list1):
-                print(x)
+                #print(x)
                 for l, y in enumerate(list1):
                     if x + y == result:
-                        return [k, l]
+                        if k == l:
+                            pass
+                        else:
+                            return [k, l]
 
 
-#test = TwoSum()
-#print(test.calculate_two_sum([1, 3, 2, -7, 5], 7))
+test = TwoSum()
+print(test.calculate_two_sum([1, 3, 2, -7, 5], 7))
