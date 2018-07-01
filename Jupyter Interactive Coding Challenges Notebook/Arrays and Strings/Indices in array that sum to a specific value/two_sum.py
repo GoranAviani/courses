@@ -9,11 +9,12 @@ class TwoSum(object):
             raise ValueError('List 1 cant be empty')
 
         else:
-            for x in list1:
+            for k, x in enumerate(list1):
                 print(x)
-                for y in list1[:+1]:
-                    print(y)
+                for l, y in enumerate(list1):
+                    if x + y == result:
+                        return [k, l]
 
 
-test = TwoSum()
-test.calculate_two_sum([1, 3, 2, -7, 5], 7)
+#test = TwoSum()
+#print(test.calculate_two_sum([1, 3, 2, -7, 5], 7))
