@@ -4,7 +4,7 @@ import fizzbuzz
 class FizzBuzzTestCase(unittest.TestCase):
 
     def test_fizzbuzz(self):
-        my_fizzbuzz = FizzBuzz()
+        my_fizzbuzz = fizzbuzz.FizzBuzz()
         self.assertRaises(TypeError, my_fizzbuzz.fizz_buzz, None)
         self.assertRaises(ValueError, my_fizzbuzz.fizz_buzz, 0)
         expected = [
