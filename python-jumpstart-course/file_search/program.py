@@ -1,3 +1,5 @@
+import os
+
 
 def main():
     print_header()
@@ -19,17 +21,27 @@ def print_header():
 
 
 def get_folder_from_user():
-    fodler = input("what folder do you want to search")
+    folder = input("what folder do you want to search")
     #folder is empty, none or if it is just whitespace
-    if not folder or folder.strip():
+    if not folder or not folder.strip():
         return None
+
+    #if it is not a directory
+    if not os.path.isdir(folder):
+        return None
+
+    #return absolute path of folder
+    return os.path.abspath(folder)
 
 
 def get_search_text_from_user():
-    pass
+    text = input("What do you want to search for, single phrases only")
+    return text
 
-def search_folders():
-    pass
+
+
+def search_folders(folder, text):
+    print("searching {} for {}".format(folder, text))
 
 
 
