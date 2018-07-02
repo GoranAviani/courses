@@ -24,5 +24,3 @@ class SelectionSort(object):
         else:
             return sorted(list1)
 
-
-
