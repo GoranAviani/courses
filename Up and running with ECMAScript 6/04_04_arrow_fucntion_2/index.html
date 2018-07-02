@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
+	<script type="text/babel">
+		
+		//Old way:
+
+		var person = {
+            first: "Jack",
+            actions: ["bike", "surf", "run", "dance"],
+            printActions: function () {
+                var _this = this;
+                this.actions.forEach(function (akcija) {
+                    var str = _this.first + " likes to " + akcija;
+                    console.log(str)
+                });
+            }
+        };
+
+		person.printActions()
+	
+	</script>
+	<title>Arrow Functions and 'this'</title>
+</head>
+<body>
+</body>	
+</html>
