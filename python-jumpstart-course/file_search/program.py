@@ -12,7 +12,13 @@ def main():
     if not text:
         print("We cant search for nothing")
 
-    search_folders(folder, text)
+    matches = search_folders(folder, text)
+
+    #print results
+    for match in matches:
+        print(match)
+
+
 
 def print_header():
     print("---------------------------------------------------")
@@ -36,13 +42,41 @@ def get_folder_from_user():
 
 def get_search_text_from_user():
     text = input("What do you want to search for, single phrases only")
-    return text
+    return text.lower()
 
 
 
 def search_folders(folder, text):
-    print("searching {} for {}".format(folder, text))
 
+    all_matches=[]
+    #listdir gives only filename, not full path name
+    items = os.listdir(folder)
+
+
+    for item in items:
+        #adding path + name of folder as full path
+        full_item = os.path.join(folder, item)
+
+        #if its a folder skip it
+        if os.path.isdir(item):
+            continue
+        #if its a - file search it
+        matches = search_file(full_item, text)
+        all_matches.extend(matches)
+
+    return all_matches
+
+
+
+def search_file(full_path, search_text):
+    matches=[]
+    with open(full_path, "r", encoding = "utf-8") as fin:
+
+        for line in fin:
+            if line.lower().find(search_text) >= 0:
+                matches.append(line)
+
+    return matches
 
 
 
