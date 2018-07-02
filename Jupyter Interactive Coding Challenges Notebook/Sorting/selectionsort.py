@@ -16,8 +16,13 @@
 
 class SelectionSort(object):
 
-    def selection_sort(self):
-        pass
+    def selection_sort(self, list1):
+        if list1 is None:
+            raise TypeError("This list cant be none")
+        elif list1 == []:
+            return []
+        else:
+            return sorted(list1)
 
 
 
