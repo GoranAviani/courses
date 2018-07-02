@@ -19,7 +19,44 @@
         };
 
 		person.printActions()
-	
+
+
+
+		var person1 = {
+            first: "Jack1",
+            actions: ["bike", "surf", "run", "dance"],
+            printActions1: function () {
+                this.actions.forEach(function (akcija) {
+                    var str = this.first + " likes to " + akcija;
+                    console.log(str)
+                }.bind(this));
+            }
+        };
+
+		person1.printActions1()
+
+
+		//ES6
+		var person2 = {
+            first: "Jack2",
+            actions: ["bike", "surf", "run", "dance"],
+            printActions2() {
+                this.actions.forEach((akcija) => {
+                    var str = this.first + " likes to " + akcija;
+                    console.log(str)
+                });
+            }
+        };
+
+		person2.printActions2()
+
+
+
+
+
+
+
+
 	</script>
 	<title>Arrow Functions and 'this'</title>
 </head>
