@@ -62,6 +62,25 @@ finally:
 
 
 
+Dictionaries
+#Only immutable objects can be used as keys to dictionaries. Immutable objects are those that can't be changed. So far, the only mutable objects you've come across are lists and dictionaries. Trying to use a mutable object as a dictionary key causes a TypeError.
+
+
+bad_dict = {
+  [1, 2, 3]: "one two three", 
+}
+#Result: >>>
+#TypeError: unhashable type: 'list'
+#>>>
+
+
+
+
+
+
+
+
+
 
 
 
