@@ -58,6 +58,20 @@ function findAllNumbers(a,b){
         }
 console.log(findAllNumbers(1,8))
 */
+
+
+function Faktorijel(b){
+        var i;
+        var result = 1;
+        for (i = 1; i < b + 1; i++) {
+            result = (result * i);
+        }
+        return result
+        }
+console.log(Faktorijel(9))
+
+
+
 /*
 # Question 3
 # Level 1
