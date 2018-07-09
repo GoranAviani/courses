@@ -1,5 +1,7 @@
 import os
+import collections
 
+SearchResult = collections.namedtuple("SearchResult", "file, line, text")
 
 def main():
     print_header()
@@ -14,10 +16,18 @@ def main():
 
     matches = search_folders(folder, text)
 
+    match_count = 0
+
     #print results
     for match in matches:
-        print(match)
-
+        match_count += 1
+        #print(match)
+        #print("----------MATCH-----------")
+        #print("file {}" .format(match.file))
+        #print("line: {} ".format(match.line))
+        #print("match text: {}" .format(match.text.strip()))
+        #print()
+    print("{}".format(match_count))
 
 
 def print_header():
@@ -57,12 +67,16 @@ def search_folders(folder, text):
         #adding path + name of folder as full path
         full_item = os.path.join(folder, item)
 
-        #if its a folder skip it
-        if os.path.isdir(item):
-            continue
-        #if its a - file search it
-        matches = search_file(full_item, text)
-        all_matches.extend(matches)
+        #if its a folder call search_folders function
+        if os.path.isdir(full_item):
+            matches = search_folders(full_item, text)
+            all_matches.extend(matches)
+        else:
+
+            #if its a - file search it
+            matches = search_file(full_item, text)
+            all_matches.extend(matches)
+
 
     return all_matches
 
@@ -72,9 +86,13 @@ def search_file(full_path, search_text):
     matches=[]
     with open(full_path, "r", encoding = "utf-8") as fin:
 
+        line_num = 0
         for line in fin:
+            line_num += 1
+            #if find is > 0 append the line to matches
             if line.lower().find(search_text) >= 0:
-                matches.append(line)
+                m = SearchResult(line = line_num, file = full_path, text = line)
+                matches.append(m)
 
     return matches
 
