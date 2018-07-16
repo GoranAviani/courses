@@ -8,3 +8,4 @@ class PermutationTestCase(unittest.TestCase):
         self.assertEqual(my_perm("dog", "god"), True)
         self.assertEqual(my_perm("stpauli", "stpauli"), False)
         self.assertEqual(my_perm("mmamm", "mmamm"), True)
+        self.assertEqual(my_perm("mmmm", "mmmmm"), False)
