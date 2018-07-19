@@ -18,11 +18,10 @@ $result = array();
 for ($a = 1; $a < $userInput +1; $a++){
     echo $a."<br/>";
     echo $a * $a ."<br/>";
-    array_push($result,$a, $a * $a);
+    $result[$a]  = $a * $a ;
 }
 
-foreach ($result as $res){
-    echo $res;
+foreach ($result as $res => $val){
+    echo $res.": " .$val.", ";
 }
-
 ?>
