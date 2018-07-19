@@ -33,7 +33,7 @@ for ($a = 1; $a < $userInput +1 ; $a++) {
 }
 
 foreach ($result as $res) {
-    echo $res.'<br />';
+    echo $res.', ';
 }
 
 
