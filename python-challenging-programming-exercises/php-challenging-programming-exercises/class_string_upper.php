@@ -25,4 +25,27 @@ function printString($userInp){
 
 getString($userInput);
 */
+
+
+
+class upperString{
+	
+	function getString($userInp){
+		echo "<br/> User input gotten is: ".$userInp;
+		upperString::printString($userInp);
+	}
+	function printString($userInp){
+		//$userInp = strtoupper($userInp);
+		echo "<br/> Upper string looks like: ".strtoupper($userInp);
+	}
+	
+}
+
+//$first = new upperString;
+//var_dump($first);
+
+//calling the method in a static way:
+upperString::getString("abcddeeffgg Goran");
+
+
 ?>
