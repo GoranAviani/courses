@@ -1,3 +1,4 @@
+<?php
 /*
 # Question 6
 # Level 1
@@ -18,3 +19,25 @@
 # In case of input data being supplied to the question, it should be assumed to be a console input.
 */
 
+function squareRoot($C, $H, $D){
+	$result = array();
+	
+	foreach ($D as $number){
+		//echo $number;
+		$Q = round(sqrt((2*$C*$number)/$H));
+		//echo $Q;
+		array_push($result, $Q);	
+	}	
+	
+	foreach($result as $res){
+	echo "<br/> Result it: ".$res;
+}
+
+}
+
+$C = 50;
+$H = 30;
+$D = array(100,150,180);
+squareRoot($C,$H,$D);
+
+?>
