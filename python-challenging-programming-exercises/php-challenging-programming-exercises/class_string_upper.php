@@ -27,7 +27,8 @@ getString($userInput);
 */
 
 
-
+//the way where i called methods in a static way:
+/*
 class upperString{
 	
 	function getString($userInp){
@@ -41,11 +42,32 @@ class upperString{
 	
 }
 
-//$first = new upperString;
-//var_dump($first);
 
 //calling the method in a static way:
 upperString::getString("abcddeeffgg Goran");
+*/
+
+
+class upperString{
+	
+	function getString($userInp){
+		echo "<br/> User input gotten is: ".$userInp;
+		
+	}
+	function printString($userInp){
+		//$userInp = strtoupper($userInp);
+		echo "<br/> Upper string looks like: ".strtoupper($userInp);
+	}
+	
+}
+
+$first = new upperString();
+$first -> getString("abcddeeffgg Goran");
+$first -> printString("abcddeeffgg Goran");
+
+
+
+
 
 
 ?>
