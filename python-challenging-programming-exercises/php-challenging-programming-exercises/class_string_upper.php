@@ -47,7 +47,7 @@ class upperString{
 upperString::getString("abcddeeffgg Goran");
 */
 
-
+/*
 class upperString{
 	
 	function getString($userInp){
@@ -64,8 +64,24 @@ class upperString{
 $first = new upperString();
 $first -> getString("abcddeeffgg Goran");
 $first -> printString("abcddeeffgg Goran");
+*/
 
+class upperString{
+	
+	function getString($userInp){
+		echo "<br/> User input gotten is: ".$userInp;
+		$this -> printString($userInp);	
+	}
+	function printString($userInp){
+		//$userInp = strtoupper($userInp);
+		echo "<br/> Upper string looks like: ".strtoupper($userInp);
+	}
+	
+}
 
+$first = new upperString();
+$first -> getString("abcddeeffgg Goran");
+//$first -> printString("abcddeeffgg Goran");
 
 
 
