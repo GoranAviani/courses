@@ -79,9 +79,14 @@ function checkPassword($userInput){
 
 		if (( $hasLowerLetter == true) and ($hasUpperLetter == true) and ($hasNumber == true) and 	($hasCharacter == true) and ($hasLength == true)){
 			echo "<br/><br/> its ok : ".$ui;
+			array_push($result, $ui);
+
 		}
 
 	}
+	echo "<br/><br/>final results are: ".json_encode($result);
+
+
 
 }
 
