@@ -27,18 +27,62 @@
 $userInput = "ABd1234@1,a F1#,2w3E*,2We3345";
 
 function checkPassword($userInput){
+	$result = array();
 	//echo $userInput;
 	$userInput = explode(",", $userInput);
 	//echo $userInput;
 
+
+
 	foreach ($userInput as $ui){
-		echo $ui."<br/>";
+		echo "<br/><br/>*length: ".strlen($ui)."<br/>";
+		$hasLowerLetter = false;
+		$hasUpperLetter = false;
+		$hasNumber = false;
+		$hasCharacter = false;
+		$hasLength = false;
+
+		echo "####password: ".$ui."<br/>";
+
+		if ((strlen($ui) > 5) and (strlen($ui) < 13)){
+			$hasLength = true;
+			echo "#velicina je dobra <br/>";
+		}
 
 		for ($i = 0; $i < strlen($ui) ; $i++){
-		echo "Password character: ". $ui[$i]."<br/>";
+			echo "Pass char: ". $ui[$i]."<br/>";
+
+
+			//if it is a letter
+			if (ctype_alpha($ui[$i])){
+				if (ctype_upper($ui[$i])){
+					$hasUpperLetter = true;
+					echo "#ima veliko <br/>";
+				}
+				if (ctype_lower($ui[$i])){
+					$hasLowerLetter = true;
+					echo "#ima malo <br/>";
+				}
+			}
+
+			if (is_numeric($ui[$i])){
+				$hasNumber = true;
+				echo "#ima broj <br/>";
+			}
+
+			if (preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $ui[$i]))
+				{
+					$hasCharacter = true;
+					echo "#has special <br/>";
+				}
+		}
+
+		if (( $hasLowerLetter == true) and ($hasUpperLetter == true) and ($hasNumber == true) and 	($hasCharacter == true) and ($hasLength == true)){
+			echo "<br/><br/> its ok : ".$ui;
 		}
 
 	}
+
 }
 
 
