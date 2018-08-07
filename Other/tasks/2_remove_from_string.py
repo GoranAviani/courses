@@ -3,7 +3,7 @@
 def start():
 
     while True:
-        userInput = input ("Input a string and a comma and a character to be removed. X to E(X)it.")
+        userInput = input("Input a string and a comma and a character to be removed. X to E(X)it.")
         if userInput.upper() == "X":
             print("Good bye")
             break
@@ -20,8 +20,6 @@ def removal(word, letter):
             continue
         else:
             removed = removed + x
-
-    print (removed)
     return removed
 
 
