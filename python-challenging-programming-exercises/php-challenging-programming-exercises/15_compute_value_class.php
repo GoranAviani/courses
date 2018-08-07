@@ -20,7 +20,6 @@ class Femton{
 		// $ui = strval($ui);
 		 echo intval($ui) + intval($ui.$ui) + intval($ui.$ui.$ui) + intval($ui.$ui.$ui.$ui);
 	 }
-
 }
 
 

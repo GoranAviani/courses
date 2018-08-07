@@ -1,6 +1,6 @@
 <?php
 /*
-# Question 18
+ Question 18
 # Level 3
 # Question:
 # A website requires the users to input username and password to register.
