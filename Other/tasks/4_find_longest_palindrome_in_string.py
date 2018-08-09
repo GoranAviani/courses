@@ -5,7 +5,7 @@ def palindrome(userInput):
     for x in range(len(userInput)):
        print (x)
         #finish this
-
+  
 
 def mainMenu():
 
