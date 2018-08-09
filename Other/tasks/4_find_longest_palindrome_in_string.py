@@ -13,7 +13,7 @@ def palindrome(userInput):
 def mainMenu():
 
     while True:
-        userInput = input ("Please enter a string and I will tell you the longest palindrome, or type X for E(X)it. ")
+        userInput = input("Please enter a string and I will tell you the longest palindrome, or type X for E(X)it. ")
         if userInput.upper() == "X":
             print("Good bye!")
             break
