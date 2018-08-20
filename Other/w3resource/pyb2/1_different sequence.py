@@ -1,20 +1,17 @@
 #Write a Python function that takes a sequence of numbers and determines if all the numbers are different from each other.
 
 def diffNums(seq):
-    if len(seq) == (len(seq)):
+    if len(seq) == len(set(seq)):
         return ("It's OK")
     else:
         return ("Not OK")
 
 
-
-
-
 OKseq = [1,2,3,5,7]
 NotOKseq = [1,1,3,4,5]
 
-diffNums(OKseq)
-diffNums(NotOKseq)
+print(diffNums(OKseq))
+print(diffNums(NotOKseq))
 
 """
 ##my idea: write a py fun that takes a sequence of nums and shows dupllicate. show only one number of each duplciate.
