@@ -10,6 +10,6 @@ for bin in userInput:
     #print(int(bin, 2))
 
     if ((int(bin, 2)) % 5 == 0):
-       
+
         print(bin)
 
