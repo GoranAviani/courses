@@ -3,6 +3,7 @@
 import requests
 
 response = requests.get("https://en.wikipedia.org/robots.txt")
+#response = requests.get("https://google.com")
 
 robotText = response.text
 print("Robots.txt is a text file webmasters create to instruct web robots (typically search engine robots) how to crawl pages on their website. \n\n")
