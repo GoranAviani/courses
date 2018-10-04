@@ -7,7 +7,10 @@
 userInput = [{'id': 1, 'success': True, 'name': 'Lary'}, {'id': 2, 'success': False, 'name': 'Rabi'}, {'id': 3, 'success': True, 'name': 'Alex'}]
 
 result =0
+resultList = []
 for x in userInput:
     if x["success"]:
         result +=1
-print("{}".format(result))
+        resultList.append(x["id"])
+print("there are {}, and they have ids of {}".format(result, resultList))
+
