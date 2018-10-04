@@ -8,6 +8,6 @@ userInput = [{'id': 1, 'success': True, 'name': 'Lary'}, {'id': 2, 'success': Fa
 
 result =0
 for x in userInput:
-if x["success"]:
-result +=1
+    if x["success"]:
+    result +=1
 print("{}".format(result))

@@ -8,9 +8,9 @@
 userInput = "w3resource"
 result ={}
 for x in userInput:
-if x not in result:
-result[x] = 1
-else:
-result[x] +=1
+    if x not in result:
+        result[x] = 1
+    else:
+        result[x] +=1
 
 print("{}".format(result))
