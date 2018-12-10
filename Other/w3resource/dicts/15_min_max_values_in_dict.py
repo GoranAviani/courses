@@ -20,3 +20,26 @@ minNum = v
 
 print(maxNum)
 print(minNum)
+
+
+
+
+
+
+#2018-12-10
+#15. Write a Python program to get the maximum and minimum value in a dictionary.
+
+dic1 = {'x':500,'d':5, 'y':5874, 'z': 560}
+minNumv = dic1['x']
+maxNumv = dic1['x']
+print(str(minNumv))
+
+for k, v in dic1.items():
+if v < minNumv:
+minNumv = v
+elif v > maxNumv:
+maxNumv = v
+
+print(str(minNumv))
+print(str(maxNumv))
+
