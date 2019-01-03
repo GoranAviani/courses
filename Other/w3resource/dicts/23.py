@@ -9,15 +9,17 @@ itemsinresult = []
 
 for x in data:
    print(x)
-   print(x['item'])
-   print(x['amount'])
+   # print(x['item'])
+#   print(x['amount'])
    newdict = {}
    if x['item'] not in itemsinresult:   
       newdict[x['item']] = x['amount']
       itemsinresult.append(x['item'])
       result.append(newdict)
-#   else:
-       
+   else:
+      for z in result:
+          if x['item'] in z:
+              z[x['item']] += x['amount']     
             
      
        
