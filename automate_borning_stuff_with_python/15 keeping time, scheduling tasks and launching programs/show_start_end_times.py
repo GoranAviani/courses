@@ -9,11 +9,11 @@ def calcWastedTime():
     return wastingTime
 
 def main():
-    startTime = time.time()
+    startTime = round(time.time(), 2)
     wastedTime = calcWastedTime()
-    endTime = time.time()
+    endTime = round(time.time(), 2)
 
-    print("Start time was {}, end time was {}\n It took {} seconds to finish" . format(startTime,endTime, endTime - startTime))
+    print("Start time was {}, end time was {}\n It took {} seconds to finish" . format(startTime,endTime, round(endTime - startTime, 2)))
 
 if __name__ == "__main__":
     main()
