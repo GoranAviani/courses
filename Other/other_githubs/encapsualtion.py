@@ -20,3 +20,14 @@ ivan = Student()
 ivan.name = "Ivan"
 ivan.age = 23
 ivan.group = "chess players group"
+ivan.getAttributes()
+
+
+dora = Student()
+dora.name = "Dora"
+dora.age = "27"
+dora.group = "drama class"
+dora.getAttributes()
+
+ivan.game = "chess"
+ivan.getAttributes()
