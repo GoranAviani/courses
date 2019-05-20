@@ -6,7 +6,7 @@ def input_check(userInput):
         return ("no")
 
 def main():
-    userInput = input ("enter a number from 1 to 100: ")
+    userInput = input ("")
 
 
     userInput = int(userInput)
@@ -18,13 +18,13 @@ def main():
     else:
         if userInput % 2 == 0:
             if 2 <= userInput <= 5:
-                print("not wierd")
+                print("Not Weird")
             elif 6 <= userInput <= 20:
-                print("weird")
+                print("Weird")
             elif userInput > 20:
-                print("not weird")
+                print("Not Weird")
         else:
-            print("wierd")
+            print("Weird")
 
 
 if __name__ == "__main__":
