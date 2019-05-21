@@ -7,7 +7,11 @@ def minNumber(arr):
 
     return number
 
-
+def intList(arr):
+    result = []
+    for x in arr:
+        result.append(int(x))
+    return result
 
 def main():
 
@@ -19,10 +23,11 @@ def main():
     if n < 2 or n > 10:
         print("there can be from 2 to 10 scores")
     else:
-        largest = minNumber(arr)
+        result = intList(arr)
+        largest = minNumber(result)
         largest2 = largest
 
-        for x in arr:
+        for x in result:
             if x > largest:
                 largest2 = largest
                 largest = x
