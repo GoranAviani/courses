@@ -1,6 +1,8 @@
 def main():
     n = int(input())
     students = []
+
+    #getting all students and their scores
     for x in range(n):
         name = input()
         score = float(input())
@@ -9,15 +11,30 @@ def main():
 
     print(students)
 
-    smallestScore = students[0][1]
-
+    biggestScore = students[0][1]
+    biggestName = students[0][0]
+    #finding the student with the smallest score
     for student in students:
+        if biggestScore < student[1]:
+            biggestScore = student[1]
+            biggestName = student[0]
 
-        if smallestScore > student[1]:
-            smallestScore = student[1]
-            smallestName = student[0]
 
-    print("student {} has the smallest score of {} " .format(smallestName, smallestScore))
+    print("student {} has the biggest score of {} " .format(biggestName, biggestScore))
+
+
+    smallestScore = biggestScore
+    smallestScore2 = smallestScore
+    #finding student/s with the second smallest score
+    for y in students:
+        if smallestScore > y[1]:
+            smallestScore2 = smallestScore
+            smallestScore = y[1]
+        elif y[1] > smallestScore and y[1] < smallestScore2:
+            smallestScore2 = y[1]
+
+# 4 3 1 -1 0
+    print("smallest score is {}, second smallest score is {}" .format(smallestScore, smallestScore2))
 
 if __name__ == '__main__':
     main()
