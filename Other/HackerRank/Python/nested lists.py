@@ -9,7 +9,7 @@ def main():
 
         students.append([name, score])
 
-    print(students)
+    #print(students)
 
     biggestScore = students[0][1]
     biggestName = students[0][0]
@@ -20,7 +20,7 @@ def main():
             biggestName = student[0]
 
 
-    print("student {} has the biggest score of {} " .format(biggestName, biggestScore))
+    #print("student {} has the biggest score of {} " .format(biggestName, biggestScore))
 
 
     smallestScore = biggestScore
@@ -34,7 +34,21 @@ def main():
             smallestScore2 = y[1]
 
 # 4 3 1 -1 0
-    print("smallest score is {}, second smallest score is {}" .format(smallestScore, smallestScore2))
+    #print("smallest score is {}, second smallest score is {}" .format(smallestScore, smallestScore2))
+
+
+    #finding all students with second smallest score
+    result = []
+    for x in students:
+        if x[1] == smallestScore2:
+            result.append(x[0])
+
+
+    #printing results
+    result = sorted(result)
+    for x in result:
+        print(x)
 
 if __name__ == '__main__':
+
     main()
