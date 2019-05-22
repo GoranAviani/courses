@@ -24,5 +24,15 @@ def main():
 
 
 
+    count = 0
+    suma = 0
+    for k, v in student_marks.items():
+        if k == queryName:
+            for x in v:
+                count += 1
+                suma += float(x)
+            print("{}" .format(suma/count))
+
+
 if __name__ == "__main__":
     main()
