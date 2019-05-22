@@ -19,19 +19,24 @@ def main():
         scores = []
 
 
-    print(student_marks)
+    #print(student_marks)
     queryName = input()
 
 
 
-    count = 0
-    suma = 0
+    count = 0.00
+    suma = 0.00
     for k, v in student_marks.items():
         if k == queryName:
             for x in v:
                 count += 1
                 suma += float(x)
-            print("{}" .format(suma/count))
+            result = suma/count
+
+            if int(result):
+                print(str(str(result) + "0")) #cheat
+            else:
+                print(round(result, 2))
 
 
 if __name__ == "__main__":
