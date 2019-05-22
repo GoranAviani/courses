@@ -33,10 +33,11 @@ def main():
                 suma += float(x)
             result = suma/count
 
-            if int(result):
-                print(str(str(result) + "0")) #cheat
+            if result.is_integer():
+                print(str(result) + "0") #cheat
             else:
-                print(round(result, 2))
+                 print(format(result, '.2f')) # on 59 59 60 it dosn't round here but in online IDE it rounds correctly
+                #print(str(result)[:5])
 
 
 if __name__ == "__main__":
