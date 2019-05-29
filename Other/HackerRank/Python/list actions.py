@@ -9,6 +9,8 @@ def main():
             result.insert(int(commands[1]), commands[2])
         elif commands[0] == "print":
             print(result)
+        elif commands[0] == "remove":
+            result.remove(commands[1])
 
 
 if __name__ == "__main__":
