@@ -1,3 +1,9 @@
+def printing(result):
+    intResult = []
+    for x in result:
+        intResult.append(int(x))
+    return intResult
+
 def main():
     n = int(input())
     result = []
@@ -8,6 +14,7 @@ def main():
         if commands[0] == "insert":
             result.insert(int(commands[1]), commands[2])
         elif commands[0] == "print":
+            result = printing(result)
             print(result)
         elif commands[0] == "remove":
             result.remove(commands[1])
@@ -17,7 +24,8 @@ def main():
             result = sorted(result)
         elif commands[0] == "pop":
             result.pop()
-        
+        elif commands[0] == "reverse":
+            result = sorted(result, reverse=True)
 
 
 if __name__ == "__main__":
