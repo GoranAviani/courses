@@ -15,6 +15,9 @@ def main():
             result.append(commands[1])
         elif commands[0] == "sort":
             result = sorted(result)
+        elif commands[0] == "pop":
+            result.pop()
+        
 
 
 if __name__ == "__main__":
