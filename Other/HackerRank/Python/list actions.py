@@ -11,6 +11,8 @@ def main():
             print(result)
         elif commands[0] == "remove":
             result.remove(commands[1])
+        elif commands[0] == "append":
+            result.append(commands[1])
 
 
 if __name__ == "__main__":
