@@ -13,6 +13,8 @@ def main():
             result.remove(commands[1])
         elif commands[0] == "append":
             result.append(commands[1])
+        elif commands[0] == "sort":
+            result = sorted(result)
 
 
 if __name__ == "__main__":
