@@ -4,10 +4,13 @@
 Note : Use 'calendar' module.
 '''
 
-
+import calendar
 
 def main():
-    pass
+    userMonth = int(input("Input month: "))
+    userYear = int(input("Input year: "))
 
-if "__name__" == "__main__":
+    print(calendar.month(userYear, userMonth))
+
+if __name__ == "__main__":
     main()
