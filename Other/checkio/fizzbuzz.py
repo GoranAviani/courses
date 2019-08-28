@@ -19,18 +19,30 @@ def checkio(number):
     # It's using for auto-testing and must return a result for check.
 
     # replace this for solution
-    result = ("{} is ".format(number))
+ #   result = ("{} is ".format(number))
+ #   if number % 3 == 0:
+ #       result += "is divisible by 3"
+ #       if number % 5 == 0:
+ #           result += " and 5"
+
+  #  elif number % 5 == 0:
+  #      result += "is divisible by 5"
+  #  else:
+  #      result += "is not divisible by 3 or 5"
+
+  #  return result
+    result = ""
     if number % 3 == 0:
-        result += "is divisible by 3"
+        result += "Fizz"
         if number % 5 == 0:
-            result += " and 5"
-
+            result += " Buzz"
+            return result
+        return result
     elif number % 5 == 0:
-        result += "is divisible by 5"
+        result += "Buzz"
+        return result
     else:
-        result += "is not divisible by 3 or 5"
-
-    return result
+        return str(number)
 
 # Some hints:
 # Convert a number in the string with str(n)
