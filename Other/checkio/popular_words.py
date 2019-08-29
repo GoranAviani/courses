@@ -21,6 +21,12 @@ def replace(y):
     y = y.replace("\n", " ")
     return y
 
+def addOne(word, dict):
+    if word in dict:
+        # print(result[y])
+        dict[word] += 1
+    return dict
+
 
 def popular_words(text: str, words: list) -> dict:
     # your code here
@@ -44,13 +50,9 @@ def popular_words(text: str, words: list) -> dict:
         y = replace(y)
         if len(y.split()) > 1:
             for n in y:
-                if n in result:
-                    # print(result[y])
-                    result[n] += 1
+                result = addOne(n, result)
 
-        if y in result:
-            #print(result[y])
-            result[y] += 1
+        result = addOne(y, result)
 
 
     #print(result)
