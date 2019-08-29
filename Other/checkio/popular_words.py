@@ -13,7 +13,7 @@
 #The input text will consists of English letters in uppercase and lowercase and whitespaces.
 
 def cleann(y):
-    print(y.strip())
+    #print(y.strip())
     result = y.strip()
     return result
 
@@ -49,7 +49,8 @@ def popular_words(text: str, words: list) -> dict:
         y = cleann(y)
         y = replace(y)
         if len(y.split()) > 1:
-            for n in y:
+            p = y.split()
+            for n in p:
                 result = addOne(n, result)
 
         result = addOne(y, result)
@@ -58,24 +59,33 @@ def popular_words(text: str, words: list) -> dict:
     #print(result)
     return result
 if __name__ == '__main__':
-    print("Example:")
-    print(popular_words('''
-When I was One
-I had just begun
-When I was Two
-I was nearly new
-''', ['i', 'was', 'three', 'near']))
+#    print("Example:")
+#    print(popular_words('''
+#When I was One
+#I had just begun
+#When I was Two
+#I was nearly new
+#''', ['i', 'was', 'three', 'near']))
 
     # These "asserts" are used for self-checking and not for an auto-testing
+#    assert popular_words('''
+#When I was One
+#I had just begun
+#When I was Two
+#I was nearly new
+#''', ['i', 'was', 'three', 'near']) == {
+#        'i': 4,
+#        'was': 3,
+#        'three': 0,
+#        'near': 0
+#    }
+
+    assert popular_words("\nWhen I was One\nI had just begun\nWhen I was Two\nI was nearly new\n", ["one", "two", "three"])
     assert popular_words('''
-When I was One
-I had just begun
-When I was Two
-I was nearly new
-''', ['i', 'was', 'three', 'near']) == {
-        'i': 4,
-        'was': 3,
-        'three': 0,
-        'near': 0
-    }
+    When I was One
+    I had just begun
+    When I was Two
+    I was nearly new
+    ''', ["one", "two", "three"])
+
     print("Coding complete? Click 'Check' to earn cool rewards!")
