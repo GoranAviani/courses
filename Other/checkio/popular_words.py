@@ -80,12 +80,21 @@ if __name__ == '__main__':
 #        'near': 0
 #    }
 
-    assert popular_words("\nWhen I was One\nI had just begun\nWhen I was Two\nI was nearly new\n", ["one", "two", "three"])
-    assert popular_words('''
+    #assert popular_words("\nWhen I was One\nI had just begun\nWhen I was Two\nI was nearly new\n", ["one", "two", "three"])
+    assert popular_words(
+'''
     When I was One
     I had just begun
     When I was Two
     I was nearly new
-    ''', ["one", "two", "three"])
+    ''', ["one", "two", "three"]) == {
+        'one': 1,
+        'two': 1,
+        'three': 0
+    }
+
+
+
+
 
     print("Coding complete? Click 'Check' to earn cool rewards!")
