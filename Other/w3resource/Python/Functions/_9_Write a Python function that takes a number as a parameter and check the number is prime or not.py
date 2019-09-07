@@ -1,4 +1,4 @@
-def fun (num):
+def fun(num):
     if num == 1:
         return True
     elif num % 2 == 0:
@@ -8,3 +8,13 @@ def fun (num):
             if num % x == 0:
                 return False
         return True
+
+
+if __name__ == '__main__':
+
+    assert fun(2) == False
+    assert fun(7) == True
+    assert fun(6) == False
+
+
+    print("Coding complete!")
