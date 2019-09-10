@@ -13,6 +13,11 @@ if __name__ == '__main__':
 
   assert fun(6) == True
   assert fun(13) == False
+  assert fun(496) == True
+  assert fun(495) == False
+  assert fun(8128) == True
+  assert fun(8130) == False
+
 
 
   print("Testing completed!")
