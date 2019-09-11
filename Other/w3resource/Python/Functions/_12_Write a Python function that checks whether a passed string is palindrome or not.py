@@ -5,11 +5,22 @@
 
 
 def fun(sentence):
-    result = ""
+    result = []
     # 1 way
-    return sentence == sentence[::-1]
+    #return sentence == sentence[::-1]
 
-   
+    # 2 way
+    result = list(sentence)
+    backward = []
+    for x in range(1, len(result)+1):
+        #print(result[-x])
+        backward.append(result[-x])
+
+    if (result == backward):
+        return True
+    else:
+        return False
+
 
 if __name__ == '__main__':
 
