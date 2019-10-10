@@ -7,7 +7,6 @@ def fun(string1, string2):
     if len(string1) % 2 != 0:
         stringMid1 = math.ceil(len(string1)/2)
         stringMid2 = math.floor(len(string1) / 2)
-        result= string1[:stringMid1] + string2 + string1[len(string1)-stringMid2:]
         return string1[:stringMid1] + string2 + string1[len(string1)-stringMid2:]
     else:
         stringMid = int(len(string1)/2)
