@@ -14,6 +14,6 @@ def fun(words):
 
 if __name__ == '__main__':
     # These "asserts" are used for self-checking and not for testing
-    assert fun("Po,sumama,i,gorama,gorama,i,gorama") == ["Po","gorama","i","sumama"]
+    assert fun("po,sumama,i,gorama,gorama,i,gorama") == ["gorama","i","po","sumama"]
 
     print('Testing completed!')
