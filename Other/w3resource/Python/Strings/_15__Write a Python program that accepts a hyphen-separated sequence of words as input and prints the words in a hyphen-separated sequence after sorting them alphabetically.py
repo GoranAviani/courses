@@ -4,16 +4,19 @@
 
 
 def fun (word):
+
     wordList = word.split("-")
-    wordList = sorted(wordList)
+
+
+    wordList = sorted(wordList, key=str.casefold)
     result = "-".join(wordList)
 
     return result
 
 if __name__ == '__main__':
     # These "asserts" are used for self-checking and not for testing
-    assert fun("po-sumama-i-gorama") == "gorama-i-po-sumama"
-    assert fun("the-date-is-tenth-of-october") == "date-is-october-of-tenth-the"
+    assert fun("Po-sumama-i-gorama") == "gorama-i-Po-sumama"
+    assert fun("The-date-is-tEnth-of-October") == "date-is-October-of-tEnth-The"
 
     print('Testing completed!')
 
