@@ -4,6 +4,7 @@
 # If there is no symmetrical middle then take 1 more sign from the start (left) side.
 import math
 def fun(string1, string2):
+    string1, string2 = string1.lower()
     if len(string1) % 2 != 0:
         stringMid1 = math.ceil(len(string1)/2)
         stringMid2 = math.floor(len(string1) / 2)
