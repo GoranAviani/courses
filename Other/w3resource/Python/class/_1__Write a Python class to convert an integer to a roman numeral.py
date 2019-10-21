@@ -6,7 +6,11 @@ class PySolution:
                      90: "XC", 50: "L", 40: "XL", 10: "X", 9: "IX", 5: "V", 4: "IV", 1: "I"}
         result = ""
 
+
         for k, v in romanNums.items():
+            if k < number and number / k > 0:
+                number -= k
+                result += v
             while number % k == 0 and number > 0:
                 number -= k
                 result += v
@@ -15,3 +19,8 @@ class PySolution:
 
 print(PySolution().calc_number(4000))
 print(PySolution().calc_number(1))
+print(PySolution().calc_number(505))
+print(PySolution().calc_number(600))
+print(PySolution().calc_number(604))
+print(PySolution().calc_number(666))
+
