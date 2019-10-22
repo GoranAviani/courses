@@ -38,5 +38,7 @@ if __name__ == '__main__':
     assert PySolution().check_parentheses("{}") == "OK"
     assert PySolution().check_parentheses("{}(") == "error"
     assert PySolution().check_parentheses("{}[]") == "OK"
+    assert PySolution().check_parentheses("{]") == "error"
+    assert PySolution().check_parentheses("{}[][]()") == "OK"
 
     print("Testing completed!")
