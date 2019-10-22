@@ -3,7 +3,17 @@
 
 class PySolution:
 
-    def get_result_roman_double_letter(self, pos1, pos2, text, result):
+    def get_result_from_whats_left(self, whatsLeft, result):
+        romanNums = {1000: "M", 500: "D", 100: "C",
+                     50: "L", 10: "X", 5: "V", 1: "I"}
+        for x in whatsLeft:
+            for k, v in romanNums.items():
+                if x == v:
+                    result += k
+        return result
+
+
+    def get_result_for_roman_double_letter(self, pos1, pos2, text, result):
         whatsLeftAfterLoop =""
         romanNumsTwo = {"CM": 900, "CD": 400, "XC": 90, "XL": 40, "IX": 9, "IV": 4}
         test = " "
@@ -24,36 +34,24 @@ class PySolution:
         return whatsLeftAfterLoop, result
 
     def calc_roman(self, text):
-        romanNums = {1000: "M", 500: "D",  100: "C",
-                      50: "L", 10: "X", 5: "V", 1: "I"}
 
         result = 0
         pos1 = 0
         pos2 = 2
         #find all on positions 0-2, 2-4, 4-6
-        whatsLeft, result = self.get_result_roman_double_letter(pos1, pos2, text, result)
+        whatsLeft, result = self.get_result_for_roman_double_letter(pos1, pos2, text, result)
+
         pos1 = 1
         pos2 = 3
         if len(whatsLeft)>1:
             #Since two letter roman numbers done need to start on place 0 but on place 1
             # find all on positions 1-3, 3-5, 5-7
-            whatsLeft, result = self.get_result_roman_double_letter(pos1, pos2, whatsLeft, result)
+            whatsLeft, result = self.get_result_for_roman_double_letter(pos1, pos2, whatsLeft, result)
 
 
-        for x in whatsLeft:
-            for k, v in romanNums.items():
-                if x == v:
-                    result += k
-
+        result = self.get_result_from_whats_left(whatsLeft, result)
         return result
 
-
-
-#print(PySolution().calc_roman("MMMM"))
-#print(PySolution().calc_roman("DX"))
-#print(PySolution().calc_roman("DXI"))
-#print(PySolution().calc_roman("DCXL"))
-#print(PySolution().calc_roman("DXLIV"))
 
 if __name__ == '__main__':
     # These "asserts" are used for self-checking and not for testing
@@ -62,7 +60,7 @@ if __name__ == '__main__':
     assert PySolution().calc_roman("DXI") == 511
     assert PySolution().calc_roman("DCXL") == 640
     assert PySolution().calc_roman("DXLIV") == 544
-    
+
 
 
 
