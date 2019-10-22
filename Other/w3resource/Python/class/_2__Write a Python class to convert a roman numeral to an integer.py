@@ -60,9 +60,7 @@ if __name__ == '__main__':
     assert PySolution().calc_roman("DXI") == 511
     assert PySolution().calc_roman("DCXL") == 640
     assert PySolution().calc_roman("DXLIV") == 544
-
-
-
-
+    assert PySolution().calc_roman("MMMDCCCXXXIII") == 3833
+    assert PySolution().calc_roman("MMDXLIV") == 2544
 
     print('Testing completed!')
