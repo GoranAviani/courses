@@ -49,8 +49,22 @@ class PySolution:
 
 
 
-print(PySolution().calc_roman("MMMM"))
-print(PySolution().calc_roman("DX"))
-print(PySolution().calc_roman("DXI"))
-print(PySolution().calc_roman("DCXL"))
-print(PySolution().calc_roman("DXLIV"))
+#print(PySolution().calc_roman("MMMM"))
+#print(PySolution().calc_roman("DX"))
+#print(PySolution().calc_roman("DXI"))
+#print(PySolution().calc_roman("DCXL"))
+#print(PySolution().calc_roman("DXLIV"))
+
+if __name__ == '__main__':
+    # These "asserts" are used for self-checking and not for testing
+    assert PySolution().calc_roman("MMMM") == 4000
+    assert PySolution().calc_roman("DX") == 510
+    assert PySolution().calc_roman("DXI") == 511
+    assert PySolution().calc_roman("DCXL") == 640
+    assert PySolution().calc_roman("DXLIV") == 544
+    
+
+
+
+
+    print('Testing completed!')
