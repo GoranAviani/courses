@@ -44,5 +44,7 @@ def fun(text):
 if __name__ == '__main__':
     # These "asserts" are used for self-checking and not for testing
     assert fun("    po sumama i gorama.\n  po sumama i gorama.\n          po sumama i gorama.") == "po sumama i gorama.\npo sumama i gorama.\npo sumama i gorama."
+    assert fun("po sumama i gorama.\n  po sumama i gorama.\n          po sumama i gorama.") == "po sumama i gorama.\npo sumama i gorama.\npo sumama i gorama."
+    assert fun("   po sumama i \ngorama.\n  po sumama\n i gorama.\n   po sumama i gorama.") == "po sumama i \ngorama.\npo sumama\ni gorama.\npo sumama i gorama."
 
     print('Testing completed!')
