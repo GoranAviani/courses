@@ -3,16 +3,12 @@
 def fun(text):
     text = list(text)
     result = []
-    counter = 0
     if text[0] == ' ':
         cleanStart = True
     else:
         cleanStart = False
 
-
-
     for x in text:
-
         # Taking care that all empty spaces in the start get removed
         if cleanStart == True:
             if x == '\n':
@@ -24,7 +20,6 @@ def fun(text):
             else:
                 result.append(x)
                 cleanStart = False
-
         else:
             if x == '\n':
                 result.append(x)
@@ -32,9 +27,7 @@ def fun(text):
             else:
                 result.append(x)
 
-
-    result = ("").join(result)
-
+    result = "".join(result)
     return result
 
 
