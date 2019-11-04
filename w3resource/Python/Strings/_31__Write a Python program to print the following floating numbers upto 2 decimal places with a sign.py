@@ -7,8 +7,15 @@ def fun(num):
         result = result[:len(result) - 3]
 
     #Only add + when needed, - comes as a part of parameter
-    if float(result) > 0:
-        result = "+" + str(result)
+    #if float(result) > 0:
+    #    result = "+" + str(result)
+
+    print(result)
+    #Another way, for fun:
+    # assuming there is - when needed if there is no + it needs to be placed.
+    if result[0:1] != "+" and result[0:1] != "-":
+        result = "+" + result
+
     return result
 
 if __name__ == "__main__":
