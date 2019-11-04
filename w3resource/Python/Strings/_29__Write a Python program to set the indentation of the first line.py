@@ -24,5 +24,7 @@ def fun(text, indentation):
 if __name__ == '__main__':
     # These "asserts" are used for self-checking and not for testing
     assert fun("kuca i auto\nsumama i gorama.\nkuca i auto", 4) == "    kuca i auto\nsumama i gorama.\nkuca i auto"
+    assert fun("123\n12", 4) == "    123\n12"
+    assert fun("kuca", 12) == "            kuca"
 
     print('Testing completed!')
