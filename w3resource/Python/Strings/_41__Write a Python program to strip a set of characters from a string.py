@@ -3,16 +3,13 @@
 
 def fun(text, chars):
     stripChars = list(chars)
-    result = []
-
-    text = list(text)
+    result = ""
 
     for x in text:
         if x in stripChars:
             pass
         else:
-            result.append(x)
-    result = "".join(result)
+            result += x
     return result
 
 if __name__ == "__main__":
