@@ -2,15 +2,22 @@
 
 
 def fun(text):
-    text1 = list(text)
+    #text1 = list(text)
+    #result = ""
+    #for x in range(0, len(text)):
+    #    result += text1.pop()
+    #return result
+
     result = ""
-    for x in range(0, len(text)):
-        result += text1.pop()
+    for x in range(len(text), 0, -1):
+        result += text[x-1: x]
     return result
 
 if __name__ == "__main__":
     # These "asserts" are used for self-checking and not for testing
     assert fun("kuca") == "acuk"
     assert fun("kuca je velika") == "akilev ej acuk"
+
+
 
     print('Testing completed!')
