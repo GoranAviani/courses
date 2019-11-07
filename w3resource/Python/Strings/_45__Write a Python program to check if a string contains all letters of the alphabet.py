@@ -11,6 +11,7 @@ def fun(text):
 if __name__ == "__main__":
     # These "asserts" are used for self-checking and not for testing
     assert fun("kucamama auto nebo") == False
-
+    assert fun("thequickbrownfoxjumpsoverthelazydog") == True
+    assert fun("th equic kbrownfo xjump    sover thela zydog") == True
 
     print('Testing completed!')
