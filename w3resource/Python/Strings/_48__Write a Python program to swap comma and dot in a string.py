@@ -1,14 +1,14 @@
 #48. Write a Python program to swap comma and dot in a string.
 
 def fun(text):
-    result = ""
-    for x in text:
-        if x == ",":
-            result += "."
-        else:
-            result += x
-    return result
-
+    #result = ""
+    #for x in text:
+    #    if x == ",":
+    #        result += "."
+    #    else:
+    #        result += x
+    #return result
+    return text.replace(",", ".")
 
 if __name__ == "__main__":
     # These "asserts" are used for self-checking and not for testing
