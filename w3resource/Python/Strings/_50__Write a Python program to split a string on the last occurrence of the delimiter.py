@@ -16,8 +16,7 @@ def fun(text, delimeter):
                 splited = True
 
 
-    result.append(split2[::-1])
-    result.append(split1[::-1])
+    result = [split2[::-1], split1[::-1]]
     return result
 if __name__ == "__main__":
     # These "asserts" are used for self-checking and not for testing
