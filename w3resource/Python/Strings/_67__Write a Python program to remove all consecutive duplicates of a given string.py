@@ -2,12 +2,22 @@
 
 
 def fun(text):
-    result = ""
+    #  result = ""
+    #  for x in text:
+    #    if x not in result:
+    #      result += x
+    #    else:
+    #      pass
+    #  return result
+    result = []
+    text = list(text)
     for x in text:
         if x not in result:
-            result += x
+            result.append(x)
         else:
             pass
+
+    result = "".join(result)
     return result
 
 
