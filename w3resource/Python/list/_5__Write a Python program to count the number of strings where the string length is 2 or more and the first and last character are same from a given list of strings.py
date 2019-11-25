@@ -3,14 +3,15 @@
 def fun(text):
     result = []
     for x in text:
-        if x[:1] == x[len(x) - 1:len(x)]:
-            result.append(x)
+        if len(x) > 1:
+            if x[:1] == x[len(x) - 1:len(x)]:
+                result.append(x)
     return result
 
 
 if __name__ == "__main__":
     # These "asserts" are used for self-checking and not for testing
-    assert fun(["abba", "121", "cars"]) == ["abba", "121"]
-    assert fun(["abba", "121", "test text", "noot good"]) == ["abba", "121", "test text"]
+    assert fun(["abba", "a", "121", "cars", "1"]) == ["abba", "121"]
+    assert fun(["abba", "121", "b", "test text", "noot good", "a"]) == ["abba", "121", "test text"]
 
     print('Testing completed!')
