@@ -1,11 +1,14 @@
 # 4. Write a Python program to get the smallest number from a list.
 def fun(numbers):
-    result = numbers[0]
-    for x in numbers:
-        if x < result:
-            result = x
+    # result = numbers[0]
+    # for x in numbers:
+    #   if x < result:
+    #     result = x
 
-    return result
+    # return result
+
+    numbers.sort(reverse=True)
+    return numbers.pop()
 
 
 if __name__ == "__main__":
