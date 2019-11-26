@@ -1,10 +1,15 @@
 # 8. Write a Python program to check a list is empty or not
 
 def fun(text):
-    if len(text) == 0:
-        return True
-    else:
+    # if len(text) == 0:
+    #   return True
+    # else:
+    #   return False
+
+    if text:
         return False
+    else:
+        return True
 
 
 if __name__ == "__main__":
