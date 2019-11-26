@@ -6,10 +6,15 @@ def fun(text):
     # else:
     #   return False
 
-    if text:
-        return False
-    else:
+    # if text:
+    #   return False
+    # else:
+    #   return True
+
+    if text == []:
         return True
+    else:
+        return False
 
 
 if __name__ == "__main__":
