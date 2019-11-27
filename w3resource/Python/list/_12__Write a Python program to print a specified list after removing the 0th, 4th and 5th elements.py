@@ -3,15 +3,22 @@
 # Expected Output : ['Green', 'White', 'Black']
 
 def fun(text):
-    removeItems = [0, 4, 5]
-    result = []
-    for x in range(0, len(text) - 1):
-        if x in removeItems:
-            pass
-        else:
-            result.append(text[x])
+    # removeItems= [0, 4, 5]
+    # result = []
+    # for x in range(0, len(text)-1):
+    #  if x in removeItems:
+    #    pass
+    #  else:
+    #    result.append(text[x])
 
-    return result
+    # return result
+
+    removeItems = [0, 4, 5]
+    counter = 0
+    for x in removeItems:
+        del text[x - counter]
+        counter += 1
+    return text
 
 
 if __name__ == "__main__":
