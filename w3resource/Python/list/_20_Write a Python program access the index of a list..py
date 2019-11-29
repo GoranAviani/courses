@@ -2,11 +2,16 @@
 
 
 def fun(list1):
-    counter = 0
+    #  counter = 0
+    #  result = []
+    #  for x in list1:
+    #    result.append((counter, x))
+    #    counter += 1
+    #  return result
+
     result = []
-    for x in list1:
-        result.append((counter, x))
-        counter += 1
+    for x in range(0, len(list1)):
+        result.append((x, list1[x]))
     return result
 
 
