@@ -1,13 +1,15 @@
 # 24. Write a Python program to append a list to the second list.
 
 def fun(item1, item2):
-    result = []
-    for x in item1:
-        result.append(x)
-    for x in item2:
-        result.append(x)
+    # result = []
+    # for x in item1:
+    #   result.append(x)
+    # for x in item2:
+    #   result.append(x)
+    #
+    # return result
 
-    return result
+    return item1 + item2
 
 
 if __name__ == "__main__":
