@@ -1,7 +1,7 @@
 # 26. Write a python program to check whether two lists are circularly identical
 
 def fun(item1, item2):
-
+    pass
 
 # find first occurance of lower number
 # and reset positions(but keep order)
