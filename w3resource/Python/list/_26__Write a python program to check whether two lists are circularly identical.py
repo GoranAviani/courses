@@ -34,20 +34,17 @@ def fun(item1, item2):
 
     list2 = list2 + beforeSmallest
 
-    print(list1)
-    print(list2)
-
-    for x in range(0, len(list1)):
-        if list1[x] == list2[x]:
-            pass
-        else:
+    for x in range(0, len(list1) - 1):
+        if list1[x] != list2[x]:
             return False
-        return True
+    return True
 
 
 if __name__ == "__main__":
-    # These "asserts" are used for self-checking and not for testing
+    #  These "asserts" are used for self-checking and not for testing
     assert fun([1, 2, 3, 0, 4, 1], [3, 0, 4, 1, 2]) == False
     assert fun([1, 2, 3, 0, 4], [3, 0, 4, 1, 2]) == True
+    assert fun([10, 10, 0, 0, 10], [10, 10, 10, 0, 0]) == True
+    assert fun([10, 10, 10, 0, 0], [1, 10, 10, 0, 0]) == False
 
     print('Testing completed!')
