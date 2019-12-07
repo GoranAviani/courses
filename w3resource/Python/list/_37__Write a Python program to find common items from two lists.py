@@ -1,12 +1,13 @@
 # 37. Write a Python program to find common items from two lists.
 
 def fun(item1, item2):
-    result = []
-    for x in item1:
-        if x in item2:
-            result.append(x)
+    #  result = []
+    #  for x in item1:
+    #    if x in item2:
+    #      result.append(x)
 
-    return result
+    #  return result
+    return (list(set(item1) & set(item2)))
 
 
 if __name__ == "__main__":
