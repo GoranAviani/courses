@@ -1,8 +1,18 @@
 #43. Write a Python program to split a list into different variables.
 
 def fun(item1):
-    var1, var2, var3 = item1
-    return [var1, var2, var3]
+    #var1, var2, var3 = item1
+    #return [var1, var2, var3]
+
+    result = {}
+    result1 = []
+    for x in range(0, len(item1)):
+        result["var"+str(x+1)] = item1[x]
+
+    for k, v in result.items():
+        result1.append(v)
+
+    return result1
 
 
 if __name__ == "__main__":
