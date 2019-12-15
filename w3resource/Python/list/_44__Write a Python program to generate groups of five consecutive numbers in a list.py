@@ -15,8 +15,9 @@ def fun(item1):
         else:
             temp.append(x)
 
-
-
+    #add end temp list if it has less than 5 items
+    if len(temp) > 0:
+        result.append(temp)
     return(result)
 
 
@@ -24,6 +25,7 @@ if __name__ == "__main__":
     #  These "asserts" are used for self-checking and not for testing
 
     assert fun(10) == [[1,2,3,4,5],[6,7,8,9,10]]
-
+    assert fun(13) == [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10],[11,12,13]]
+    assert fun(3) == [[1, 2, 3]]
 
     print('Testing completed!')
