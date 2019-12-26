@@ -1,4 +1,5 @@
 
+#
 #51. Write a Python program to split a list every Nth element.
 
 
@@ -16,11 +17,16 @@ def fun (item1, n):
         else:
             temp.append(x)
 
+    if counter < n and len(temp) != 0:
+        result.append(temp)
+
     print(result)
     return result
 if __name__ == "__main__":
     # These "asserts" are used for self-checking and not for testing
     assert fun(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'], 5) == [['a', 'b', 'c', 'd', 'e'], ['f', 'g', 'h', 'i', 'j']]
+
+    assert fun(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n'], 5) == [['a', 'b', 'c', 'd', 'e'], ['f', 'g', 'h', 'i', 'j'], ['k', 'l', 'm', 'n']]
 
 
     print('Testing completed!')
