@@ -1,6 +1,7 @@
 #57. Write a Python program to check if all items of a list is equal to a given string.
 
 
+
 def fun(item1, item2):
 
     for x in item1:
