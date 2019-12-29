@@ -3,12 +3,17 @@
 
 def fun(item1, item2):
 
-    try:
-        element = item1[item2]
-        return True
-    except:
-        return False
+#    try:
+#       element = item1[item2]
+#        return True
+#    except:
+#        return False
 
+    length = len(item1)
+    if length > item2-1:
+        return True
+    else:
+        return False
 
 
 if __name__ == "__main__":
