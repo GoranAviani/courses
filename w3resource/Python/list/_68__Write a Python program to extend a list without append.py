@@ -10,7 +10,11 @@ def fun(**kwargs):
         item2 = kwargs["item2"]
     except:
         return "Item 1 is empty."
-    return item2 + item1
+
+    # return item2 + item1
+
+    item2.extend(item1)
+    return item2
 
 
 if __name__ == "__main__":
