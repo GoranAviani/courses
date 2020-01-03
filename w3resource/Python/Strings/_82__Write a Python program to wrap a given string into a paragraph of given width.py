@@ -32,24 +32,27 @@ def fun(**kwargs):
 
     #return proccessedResult
 
-    counter = 0
-    item1 = item1.split(" ")
-    resultList = []
-    result = []
-    for x in item1:
-        if (len(x) + counter <= item2):
-            result.append(x)
-            counter += len(x)
-        else:
-            resultList.append(" ".join(result))
-            result = []
-            counter = 0
-            result.append(x)
-            counter += 1
-    if counter > 0:
-        resultList.append(" ".join(result))
-    joinedResult = "\n".join(resultList)
-    return joinedResult
+    #counter = 0
+    #item1 = item1.split(" ")
+    #resultList = []
+    #result = []
+    #for x in item1:
+    #    if (len(x) + counter <= item2):
+    #        result.append(x)
+    #        counter += len(x)
+    #    else:
+    #        resultList.append(" ".join(result))
+    #        result = []
+    #        counter = 0
+    #        result.append(x)
+    #        counter += 1
+    #if counter > 0:
+    #    resultList.append(" ".join(result))
+    #joinedResult = "\n".join(resultList)
+    #return joinedResult
+
+    import textwrap
+    return(textwrap.fill(item1,item2))
 
 
 if __name__ == "__main__":
