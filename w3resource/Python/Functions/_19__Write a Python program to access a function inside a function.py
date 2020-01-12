@@ -9,5 +9,6 @@ def fun(item1):
 if __name__ == "__main__":
     # These "asserts" are used for self-checking and not for testing
     assert fun(5)(10) == 15
-
+    assert fun(15)(10) == 25
+  
     print('Testing completed!')
