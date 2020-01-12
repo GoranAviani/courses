@@ -14,5 +14,7 @@ def fun(item1, item2):
 if __name__ == "__main__":
     # These "asserts" are used for self-checking and not for testing
     assert fun({11: 10, 12: 20, 23: 30, 34: 40, 15: 50, 16: 60}, [11, 34]) == True
+    assert fun({11: 10, 12: 20, 23: 30, 34: 40, 15: 50, 16: 60}, [111, 34]) == False
+    assert fun({11: 10, 12: 20, 23: 30, 34: 40, 15: 50, 16: 60}, [11, 34, 23, 16]) == True
 
     print('Testing completed!')
