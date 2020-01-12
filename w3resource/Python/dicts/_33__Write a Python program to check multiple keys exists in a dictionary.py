@@ -3,14 +3,18 @@
 
 def fun(item1, item2):
 
+ #   for x in item2:
+ #       if x in item1:
+ #           pass
+ #       else:
+ #           return False
+    keys = (item1.keys())
     for x in item2:
-        if x in item1:
-            pass
-        else:
+        if x not in keys:
             return False
-
-
     return True
+
+
 if __name__ == "__main__":
     # These "asserts" are used for self-checking and not for testing
     assert fun({11: 10, 12: 20, 23: 30, 34: 40, 15: 50, 16: 60}, [11, 34]) == True
