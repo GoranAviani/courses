@@ -11,9 +11,18 @@ def fun(item1):
 
 #assuming we dont know iv values are lists
 #string way
+#    result = 0
+#    for k, v in item1.items():
+#        if str(v)[0:1] == "[":
+#            for x in v:
+#                result += 1
+
+#    return result
+
+#"type" way
     result = 0
     for k, v in item1.items():
-        if str(v)[0:1] == "[":
+        if type(v) is list:
             for x in v:
                 result += 1
 
