@@ -5,24 +5,12 @@ Expected Result : 615
 '''
 
 def first(n):
-
-    numStr = ""
-    result1 = 0
-    n = int(n)
-    for x in range(0, 3):
-        numStr += str(n)
-        result1 += int(numStr)
-    return result1
-
-
+    return int(n) + int(n + n) + int(n + n + n)
 
 def main():
     userInput = input("Enter a value: ")
-
-    result1 = first(userInput)
-
-
-    print(result1)
+    result = first(userInput)
+    print(result)
 
 
 if __name__ == "__main__":
