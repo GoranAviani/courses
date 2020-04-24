@@ -14,8 +14,8 @@ def calcSum(calcSum):
 
 def main():
     numbers = []
-    for x in range(1,4):
-        userInput = int(input("enter the {} number" . format(x)))
+    for x in range(1, 4):
+        userInput = int(input("Enter the {}. number" . format(x)))
         numbers.append(userInput)
 
     result = calcSum(numbers)
