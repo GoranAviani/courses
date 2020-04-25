@@ -7,9 +7,11 @@ def calc(**kwargs):
     except KeyError as e:
         return "{}" .format(e)
 
+    times_multiplied = int(all_user_inputs[1])
+    base_word = all_user_inputs[0]
     result = ""
-    for n in range(0, int(all_user_inputs[1])):
-        result += all_user_inputs[0]
+    for n in range(0, times_multiplied):
+        result += base_word
     return result
 
 def main():
