@@ -2,13 +2,11 @@
 
 def start():
 	result = 0
-	givenList = [1,2 , 4 ,6 ,4 ,8,4]
-	for x in givenList:
-		if x ==4:
+	given_list = [1, 2, 4, 6, 4, 8, 4]
+	for number in given_list:
+		if number ==4:
 			result +=1
-	print("there are {} number fours." .format(result))
-
-
+	print("There are {} number fours." .format(result))
 
 if __name__ == "__main__":
 	start()
