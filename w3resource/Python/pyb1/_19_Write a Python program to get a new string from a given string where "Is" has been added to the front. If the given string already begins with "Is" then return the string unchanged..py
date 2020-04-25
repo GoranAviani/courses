@@ -5,7 +5,6 @@
 
 def main():
 	userInput = input("Enter a string: \n")
-	print(userInput) if userInput[0:2] == "Is" else print("Is" + userInput)
-
+	print(userInput) if userInput[0:2].upper() == "IS" else print("Is" + userInput)
 if __name__ == "__main__":
 	main()
