@@ -9,10 +9,8 @@ def start():
 	except ValueError as e:
 		print("{}" .format(e))
 		quit()
-	if (number % 2 == 0):
-		print("num is even")
-	else:
-		print("num is odd")
+
+	print("Number is even") if (number % 2 == 0) else print("Number is odd")
 
 if __name__ == "__main__":
 	start()
