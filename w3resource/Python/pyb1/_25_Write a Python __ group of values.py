@@ -7,7 +7,7 @@ def main():
     #Test Data :
     #3 -> [1, 5, 8, 3] : True
     #-1 -> [1, 5, 8, 3] : False
-        :return: 
+        :return:
     """
     groupOfValues = []
     for x in range(0, 4):
