@@ -1,19 +1,27 @@
-# 20. Write a Python program to get a string which is n (non-negative integer) copies of a given string.
+# 20. Write a Python program to get a string which is n (non-negative integer)
+# copies of a given string.
 
-def calc(x):
+def calc(**kwargs):
+    try:
+        all_user_inputs = kwargs["all_user_inputs"]
+    except KeyError as e:
+        return "{}" .format(e)
+
+    times_multiplied = int(all_user_inputs[1])
+    base_word = all_user_inputs[0]
     result = ""
-    for n in range(0, len(x) + 1):
-        result = result + x[0]
+    for n in range(0, times_multiplied):
+        result += base_word
     return result
 
-
 def main():
-    data = []
+    all_user_inputs = []
     for x in range(0, 2):
-        userInput = input("enter value: \n")
-        data.append(userInput)
+        user_input = input("enter value: \n")
+        all_user_inputs.append(user_input)
 
-    result = calc(data)
+    parameters = {"all_user_inputs": all_user_inputs}
+    result = calc(**parameters)
     print(result)
 
 

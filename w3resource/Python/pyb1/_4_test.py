@@ -1,6 +1,5 @@
 import unittest
-
-from _4_radius import calc_radius
+from ._4_radius import calc_radius
 
 class RadiusTestCase(unittest.TestCase):
 

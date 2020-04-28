@@ -5,23 +5,22 @@ Expected Result : 615
 '''
 
 def first(n):
+    return int(n) + int(n + n) + int(n + n + n)
 
-    numStr = ""
-    result1 = 0
+def second(n):
+    number_string = ""
+    result = 0
     n = int(n)
+
     for x in range(0, 3):
-        numStr += str(n)
-        result1 += int(numStr)
-    return result1
-
-
+         number_string += str(n)
+         result += int(number_string)
+    return result
 
 def main():
     userInput = input("Enter a value: ")
-
-    result1 = first(userInput)
-
-
+    result, result1 = first(userInput), second(userInput)
+    print(result)
     print(result1)
 
 
