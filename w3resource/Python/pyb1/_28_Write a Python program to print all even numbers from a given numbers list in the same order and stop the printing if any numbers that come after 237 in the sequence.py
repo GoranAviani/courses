@@ -23,8 +23,6 @@ def main():
     elif int(x) == 237:
       print(x)
       break
-    else:
-      pass
 
 if __name__ == "__main__":
   main()
