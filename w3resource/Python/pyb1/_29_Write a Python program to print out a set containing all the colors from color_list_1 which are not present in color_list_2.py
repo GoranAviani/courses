@@ -16,7 +16,7 @@ def main():
     for x in color_list_1:
         if x not in color_list_2:
             result.append(x)
-    print(result)
+    print(set(result))
 
 if __name__ == "__main__":
     main()
