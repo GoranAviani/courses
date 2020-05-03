@@ -11,12 +11,12 @@ def summa(x, y, z):
     return x + y + z
 
 def check_for_duplicates(numbers):
-    return None if len(numbers) != len(set(numbers)) else numbers
+    return True if len(numbers) != len(set(numbers)) else False
 
 def summa_two(numbers):
     summ = 0
-    numbers = check_for_duplicates(numbers)
-    if numbers == None:
+    are_duplicates = check_for_duplicates(numbers)
+    if are_duplicates == True:
         return 0
 
     for number in numbers:
