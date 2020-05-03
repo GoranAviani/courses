@@ -18,11 +18,16 @@ def get_divisors(number_divisor, number_to_divide):
       all_divisors.append(divisor)
   return all_divisors
 
+def get_user_input(number_of_inputs):
+  user_input = []
+  for number_of_input in range(1, number_of_inputs +1):
+    keystrokes = input("Enter number {}: ".format(number_of_input))
+    user_input.append(keystrokes)
+
+  return user_input
 
 def main():
-  greatest_divisor = 0
-  user_input = input("Enter 2 numbers separated by comma (,) ")
-  user_input = user_input.split(",")
+  user_input = get_user_input(2)
   number_one = user_input[0]
   number_two = user_input[1]
   number_one = int(number_one)
