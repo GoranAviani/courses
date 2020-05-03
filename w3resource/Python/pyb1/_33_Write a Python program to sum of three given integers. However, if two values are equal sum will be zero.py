@@ -3,6 +3,9 @@
 def summa(x, y, z):
     allNums = [x, y, z]
     for n in allNums:
+        #count() is an inbuilt function in
+        # Python that returns count of how many times a
+        # given object occurs in list
         if allNums.count(n) > 1:
             return 0
     return x + y + z
