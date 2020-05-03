@@ -1,3 +1,6 @@
+# _35_ Write a Python program that will return true
+# if the two given integer values are equal or their sum or difference is 5
+
 def fun(sign, x, y):
     if sign == "equal":
         return x == y
@@ -7,8 +10,7 @@ def fun(sign, x, y):
         return (x + y) == 5
 
 
-
-def test(x ,y):
+def test(x, y):
     try:
         areSame = fun("equal", x, y)
         if areSame == False:
@@ -30,18 +32,10 @@ def test(x ,y):
                 return False
 
 
-
-
-
-
 if __name__ == '__main__':
-    #print('Example:')
-    #print(checkio("Hello World hello"))
-    #test(2, 2)
     assert test(2, 2) == True
     assert test(2, 3) == True
     assert test(6, 3) == False
     assert test(8, 3) == True
     assert test(-1, 6) == True
-
     print("Coding complete!")
