@@ -10,12 +10,27 @@ def summa(x, y, z):
             return 0
     return x + y + z
 
+def check_for_duplicates(numbers):
+    return None if len(numbers) != len(set(numbers)) else numbers
+
+def summa_two(numbers):
+    summ = 0
+    numbers = check_for_duplicates(numbers)
+    if numbers == None:
+        return 0
+
+    for number in numbers:
+        summ += number
+    return summ
+
 def main():
     assert summa(3, 2, 1) == 6
     assert summa(2, 2, 2) == 0
     assert summa(2, 2, 1) == 0
     assert summa(2, 5, -1) == 6
     print("Coding complete!")
+    result = summa_two([3, 2, 1])
+    print(result)
 
 
 if __name__ == '__main__':
