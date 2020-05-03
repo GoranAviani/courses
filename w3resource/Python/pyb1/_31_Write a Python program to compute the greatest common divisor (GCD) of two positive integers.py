@@ -8,8 +8,10 @@ def get_common_numbers_from_two_lists(list1, list2):
   for x in list1:
     if x in list2:
       common_dividors.append(x)
-  return common_dividors
-
+  if common_dividors:
+    return common_dividors
+  else:
+    return None
 
 def get_divisors(number_divisor, number_to_divide):
   all_divisors = []
@@ -36,8 +38,11 @@ def main():
   divisors_for_number_2 = get_divisors(number_two, number_one)
 
   common_dividors = get_common_numbers_from_two_lists(divisors_for_number_1, divisors_for_number_2)
-  greatest_divisor = get_greatest_number_in_list(common_dividors)
-  print(greatest_divisor)
+  if common_dividors == None:
+    print("There are no common dividors")
+  else:
+    greatest_divisor = get_greatest_number_in_list(common_dividors)
+    print(greatest_divisor)
 
 if __name__ == "__main__":
   main()
