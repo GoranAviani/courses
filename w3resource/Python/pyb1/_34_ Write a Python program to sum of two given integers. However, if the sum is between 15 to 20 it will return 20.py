@@ -2,10 +2,7 @@
 # However, if the sum is between 15 to 20 it will return 20
 
 def summa(x,y):
-    if (((x+y)>14) and ((x+y) < 21)):
-        return 20
-    else:
-        return (x+ y)
+    return 20 if (((x+y)>14) and ((x+y) < 21)) else x+y
 
 if __name__ == '__main__':
     assert summa(11, 6) == 20
