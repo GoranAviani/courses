@@ -45,6 +45,9 @@ def main():
     print("Coding complete!")
     result = summa_two([3, 2, 1])
     print(result)
+    result = summa_two([3, 2, 2])
+    print(result)
+
 
 
 if __name__ == '__main__':
