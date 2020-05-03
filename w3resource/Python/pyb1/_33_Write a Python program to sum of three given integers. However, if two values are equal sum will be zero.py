@@ -11,9 +11,23 @@ def summa(x, y, z):
     return x + y + z
 
 def check_for_duplicates(numbers):
+    """
+    Function that checks for duplicates in a numbers parameter and returns a bool
+    depending on the result
+    :param numbers: list containing three numbers
+    :return: boolean
+    """
     return True if len(numbers) != len(set(numbers)) else False
 
 def summa_two(numbers):
+    """
+    Goal: Summing up three numbers given in a list paramtehter numbers.
+    Story: First checking if there are duplicates using check_for_duplicates fun,
+and if there are the function returns 0, if there are no duplicates the function using
+for loop sums up all numbers and return them
+    :param numbers: list containing 3 numbers
+    :return: integer containing sum
+    """
     summ = 0
     are_duplicates = check_for_duplicates(numbers)
     if are_duplicates == True:
