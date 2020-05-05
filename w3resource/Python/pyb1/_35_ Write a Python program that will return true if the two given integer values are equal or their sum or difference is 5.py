@@ -31,11 +31,14 @@ def test(x, y):
             except (ValueError, IndexError):
                 return False
 
-
-if __name__ == '__main__':
+def main():
     assert test(2, 2) == True
     assert test(2, 3) == True
     assert test(6, 3) == False
     assert test(8, 3) == True
     assert test(-1, 6) == True
     print("Coding complete!")
+
+
+if __name__ == '__main__':
+    main()
