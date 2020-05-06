@@ -1,18 +1,18 @@
 #38. Write a Python program to solve (x + y) * (x + y)
-def fun(**kwargs):
+def calculation(**kwargs):
     try:
         item1 = kwargs["item1"]
         item2 = kwargs["item2"]
-    except:
-        return "Item 1 or 2 are empty."
+    except KeyError as e:
+        return "{}" .format(e)
+    else:
+        return ((item1 + item2) * (item1 + item2))
 
-    return ((item1 + item2) * (item1 + item2))
-
+def main():
+    # These "asserts" are used for self-checking and not for testing
+    all_items = {"item1": 2, "item2": 3}
+    assert calculation(**all_items) == 25
+    print('Testing completed!')
 
 if __name__ == "__main__":
-    # These "asserts" are used for self-checking and not for testing
-    itemOne = {"item1":  2}
-    itemTwo = {"item2": 3}
-    assert fun(**itemOne, **itemTwo) == 25
-
-    print('Testing completed!')
+    main()
