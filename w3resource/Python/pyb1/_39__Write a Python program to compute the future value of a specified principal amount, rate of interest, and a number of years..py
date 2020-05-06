@@ -1,7 +1,7 @@
 #39. Write a Python program to compute the future value of a
 # specified principal amount, rate of interest, and a number of years.
 
-def fun(**kwargs):
+def calculation(**kwargs):
     try:
         item1 = kwargs["item1"]
         item2 = kwargs["item2"]
@@ -16,7 +16,8 @@ def fun(**kwargs):
 def main():
     # These "asserts" are used for self-checking and not for testing
     all_items = {"item1": 10000, "item2": 3.5, "item3": 7}
-    assert fun(**all_items) == 12722.79
+    assert calculation(**all_items) == 12722.79
     print('Testing completed!')
+
 if __name__ == "__main__":
     main()
