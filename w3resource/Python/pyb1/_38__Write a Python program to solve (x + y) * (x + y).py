@@ -4,7 +4,7 @@ def calculation(**kwargs):
         item1 = kwargs["item1"]
         item2 = kwargs["item2"]
     except KeyError as e:
-        return "{}" .format(e)
+        print("Can not find value {}" .format(e))
     else:
         return ((item1 + item2) * (item1 + item2))
 
