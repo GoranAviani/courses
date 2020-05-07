@@ -1,4 +1,5 @@
-#3. Write a Python program to remove and print every third number from a list of numbers until the list becomes empty.
+#3. Write a Python program to remove and print every
+# third number from a list of numbers until the list becomes empty.
 
 def everyThird(userInput):
  counter = 0
@@ -8,11 +9,15 @@ def everyThird(userInput):
      if counter % 3 == 0:
          print(x)
 
+def main():
+    while True:
+        userInput = input("Enter a list of numbers separated bu comma: ")
+        userInput = userInput.split(',')
+        everyThird(userInput)
 
-while True:
-   userInput = input("Enter a list of numbers")
-   userInput = userInput.split(',')
-   everyThird(userInput)
+
+if __name__ == "__main__":
+    main()
 
 
 
