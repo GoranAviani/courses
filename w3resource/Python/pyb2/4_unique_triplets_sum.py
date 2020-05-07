@@ -1,17 +1,15 @@
-#4. Write a Python program to find unique triplets whose three elements gives the sum of zero from an array of n integers.
-
-
-#testing
+#4. Write a Python program to find unique triplets whose
+# three elements gives the sum of zero from an array of n integers.
 
 def triplets(userInput):
-       for x in userInput:
-           print("prvi {} ".format(x))
-           for y in userInput:
-              print("drugi {} ".format(y))
-              for z in userInput:
-                  print("treci {} ".format(y))
+    result = []
+    for x in userInput:
+       for y in userInput:
+          for z in userInput:
+              if x + y + z == 0:
+                  result.append("{},{},{}" .format(x,y,z))
 
-
+    print(result)
 
 
 
