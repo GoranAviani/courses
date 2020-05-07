@@ -8,11 +8,11 @@ def diff_nums(seq):
         return ("Not OK")
 
 def main():
-    OKseq = [1, 2, 3, 5, 7]
-    NotOKseq = [1, 1, 3, 4, 5]
+    ok_seq = [1, 2, 3, 5, 7]
+    not_ok_seq = [1, 1, 3, 4, 5]
 
-    print(diff_nums(OKseq))
-    print(diff_nums(NotOKseq))
+    print(diff_nums(ok_seq))
+    print(diff_nums(not_ok_seq))
 
 
 if __name__ =="__main__":
