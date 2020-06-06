@@ -1,4 +1,6 @@
-#11. Write a Python program to check the sum of three elements (each from an array) from three arrays is equal to a target value. Print all those three-element combinations
+#11. Write a Python program to check the sum of three elements
+# (each from an array) from three arrays is equal to a target value.
+# Print all those three-element combinations
 
 def fun(item1, item2):
     result = []
