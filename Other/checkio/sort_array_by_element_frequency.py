@@ -17,6 +17,7 @@ Precondition: elements can be ints or strings
 '''
 
 def frequency_sort(list_to_sort):
+    result = []
     frequency_of_items = {}
     order_of_items = {}
     order_counter = 0
@@ -31,10 +32,18 @@ def frequency_sort(list_to_sort):
 
     test = frequency_of_items
     test1 = order_of_items
+    test2 = 2
+    for k, v in frequency_of_items.items():
+        sub_result = []
+        for x in range(0,v):
+            sub_result.append(k)
+        result.extend(sub_result)
+    return result
 
 def main():
     # These "asserts" are used for self-checking and not for testing
     assert frequency_sort([4, 6, 2, 2, 6, 4, 4, 4]) == [4, 4, 4, 4, 6, 6, 2, 2]
+    print("success!")
 
 
 if __name__ == "__main__":
