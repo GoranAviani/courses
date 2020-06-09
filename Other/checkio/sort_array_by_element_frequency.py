@@ -46,6 +46,7 @@ def main():
     #assert frequency_sort(['bob', 'bob', 'carl', 'alex', 'bob']) == ['bob', 'bob', 'bob', 'carl', 'alex']
     assert frequency_sort(['bob', 'bob', 'carl', 'carl', 'alex', 'bob', 'carl']) == ['bob', 'bob', 'bob', 'carl',
                                                                                      'carl', 'carl', 'alex']
+    assert frequency_sort(['carl', 'bob', 'bob', 'carl', 'alex']) == ['carl', 'carl', 'bob', 'bob', 'alex']
 
     print("success!")
 
