@@ -11,3 +11,7 @@ print("\nUSERNAME   :   ", username)
 hostname = socket.gethostname()
 print("\nHOSTNAME   :   ", hostname)
 # get the ip address of machine
+machineIP = socket.gethostbyname(hostname)
+print("\nIP ADDRESS :  ", machineIP)
+# get the public ip address and the location
+
