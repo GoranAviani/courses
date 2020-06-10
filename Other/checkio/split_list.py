@@ -14,6 +14,9 @@ split_list([1, 2, 3]) == [[1, 2], [3]]
 2
 
 '''
+
+import math
+
 def split_list(list_to_split):
     result = []
     element_list = []
@@ -29,7 +32,7 @@ def split_list(list_to_split):
         result.append(element_list)
     else:
         split_number = number_of_elements / 2
-        split_number = round(split_number)
+        split_number = math.ceil(split_number)
         for x in range(0, split_number):
             element_list.append(list_to_split[x])
         result.append(element_list)
@@ -41,8 +44,14 @@ def split_list(list_to_split):
     return result
 
 def main():
+    print("Example:")
+    print(split_list([1, 2, 3, 4, 5, 6]))
+
     assert split_list([1, 2, 3, 4, 5, 6]) == [[1, 2, 3], [4, 5, 6]]
     assert split_list([1, 2, 3]) == [[1, 2], [3]]
+    assert split_list([1, 2, 3, 4, 5]) == [[1, 2, 3], [4, 5]]
+    assert split_list([1]) == [[1], []]
+    assert split_list([]) == [[], []]
 
     print("Success!")
 
