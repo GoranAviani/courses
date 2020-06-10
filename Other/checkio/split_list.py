@@ -44,6 +44,9 @@ def split_list(list_to_split):
     return result
 
 def main():
+    print("Example:")
+    print(split_list([1, 2, 3, 4, 5, 6]))
+
     assert split_list([1, 2, 3, 4, 5, 6]) == [[1, 2, 3], [4, 5, 6]]
     assert split_list([1, 2, 3]) == [[1, 2], [3]]
     assert split_list([1, 2, 3, 4, 5]) == [[1, 2, 3], [4, 5]]
