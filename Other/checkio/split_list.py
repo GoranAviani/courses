@@ -21,25 +21,22 @@ def split_list(list_to_split):
     result = []
     element_list = []
     number_of_elements = len(list_to_split)
+    split_number = number_of_elements / 2
+
     if number_of_elements % 2 == 0:
-        split_number = number_of_elements // 2
-        for x in range(0, split_number):
-            element_list.append(list_to_split[x])
-        result.append(element_list)
-        element_list = []
-        for x in range(split_number, number_of_elements):
-            element_list.append(list_to_split[x])
-        result.append(element_list)
+        split_number = int(split_number)
     else:
-        split_number = number_of_elements / 2
         split_number = math.ceil(split_number)
-        for x in range(0, split_number):
-            element_list.append(list_to_split[x])
-        result.append(element_list)
-        element_list = []
-        for x in range(split_number, number_of_elements):
-            element_list.append(list_to_split[x])
-        result.append(element_list)
+
+
+    for x in range(0, split_number):
+        element_list.append(list_to_split[x])
+    result.append(element_list)
+
+    element_list = []
+    for x in range(split_number, number_of_elements):
+        element_list.append(list_to_split[x])
+    result.append(element_list)
 
     return result
 
