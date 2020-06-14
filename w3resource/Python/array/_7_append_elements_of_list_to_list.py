@@ -2,6 +2,9 @@
 
 
 def addingToList(nums):
+    """
+    test text
+    """
     need_to_add = nums
 
     nums.extend(need_to_add)
@@ -14,3 +17,4 @@ result = addingToList(array_num)
 
 for x in result:
     print(x)
+    print(addingToList.__doc__)
