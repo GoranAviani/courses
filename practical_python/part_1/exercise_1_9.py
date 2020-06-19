@@ -27,7 +27,7 @@ def main():
         month_no += 1
         payment = 2684.11
         if month_no > extra_payment_start_month and month_no < extra_payment_end_month:
-            payment = payment + extra_payment_end_month
+            payment = payment + extra_payment
         principal = principal * (1 + rate / 12) - payment
         total_paid = total_paid + payment
 
