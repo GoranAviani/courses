@@ -1,3 +1,6 @@
+"""
+Exercise 1.5: The Bouncing Ball
+"""
 def main():
     height = 100
     #next_heights = []
