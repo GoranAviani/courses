@@ -21,8 +21,8 @@ def main():
         principal = principal * (1 + rate / 12) - payment
         total_paid = total_paid + payment
 
-        print('{}  {}  {}' .format(month_no, total_paid, principal))
-    print("Total paid", total_paid)
+        print('{}  {}  {}' .format(month_no, round(total_paid, 2), round(principal, 2)))
+    print("Total paid", round(total_paid, 2))
     print("Months", month_no)
 
 if __name__ == '__main__':
