@@ -24,6 +24,11 @@ def main():
         print('{}  {}  {}' .format(month_no, round(total_paid, 2), round(principal, 2)))
     print("Total paid", round(total_paid, 2))
     print("Months", month_no)
+    text = f'Total paid {total_paid:0.2f}'
+    text1 = f'Months {month_no}'
+    print(text)
+    print(text1)
+
 
 if __name__ == '__main__':
     main()
