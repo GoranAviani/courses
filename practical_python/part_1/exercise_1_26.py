@@ -7,6 +7,21 @@ def main():
         for line in f:
             print(line, end='')
 
+    f = open('files/portfolio.csv', 'rt')
+    headers = next(f)
+    print(headers)
+
+    for line in f:
+        print(line, end='')
+    f.close()
+
+
+    f = open('files/portfolio.csv', 'rt')
+    headers = next(f).split(',')
+    print(headers)
+    for line in f:
+        row = line.split(',')
+        print(row)
 
 if __name__ == '__main__':
     main()
