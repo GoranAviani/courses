@@ -1,4 +1,6 @@
-
+"""
+Exercise 1.26: File Preliminaries
+"""
 def main():
     with open('files/portfolio.csv', 'rt') as f:
         data = f.read()
