@@ -12,7 +12,8 @@ def portfolio_cost():
             try:
                 value_by_line = int(row[1]) * float(row[2])
                 total_value += value_by_line
-            except:
+            except ValueError as e:
+                print("{} . Line: {}" .format(e, line))
                 pass
     print(total_value)
 
