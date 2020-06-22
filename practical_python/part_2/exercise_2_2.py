@@ -14,5 +14,13 @@ def main():
     cost = d['shares'] * d['price']
     print(f'{cost:0.2f}')
 
+    d['shares'] = 75
+    print(d)
+
+    d['date'] = (6, 11, 2007)
+    d['account'] = 12345
+    print(d)
+
+
 if __name__ == '__main__':
     main()
