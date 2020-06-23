@@ -38,11 +38,18 @@ def main():
     print(prices)
 
 
+    #old value
+    old_value = 0
+    for row in portfolio:
+        old_pair_value = row['shares'] * row['price']
+        old_value += old_pair_value
+    print("Old value: {}".format(old_value))
+
+    #current value with new prices
     value = 0
     for x in portfolio:
         for k, v in prices.items():
             if x['name'] == k:
-                pair_value = 0
                 pair_value = x['shares'] * float(v)
                 value += pair_value
     print("Current value: {}". format(value))
