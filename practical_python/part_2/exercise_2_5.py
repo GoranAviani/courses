@@ -3,6 +3,7 @@ Exercise 2.5: List of Dictionaries
 """
 
 import csv
+from pprint import pprint
 
 def read_portfolio(filename):
     '''Computes the total cost (shares*price) of a portfolio file'''
@@ -30,6 +31,8 @@ def main():
         total += s['shares'] * s['price']
 
     print(total)
+
+    pprint(portfolio)
 
 
 if __name__ == '__main__':
