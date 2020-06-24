@@ -40,7 +40,7 @@ def make_report(portfolio, prices):
         else:
             diff_value = old_value
 
-        report.append((port['name'], port['shares'], diff_value))
+        report.append((port['name'], port['shares'], f'{diff_value:0.2f}'))
 
     print(report)
 
@@ -48,7 +48,7 @@ def make_report1(portfolio, prices):
     report = []
     for port in portfolio:
         diff_value = float(prices[port['name']]) - port['price']
-        report.append((port['name'], port['shares'], diff_value))
+        report.append((port['name'], port['shares'], f'{diff_value:0.2f}'))
 
     print(report)
 
