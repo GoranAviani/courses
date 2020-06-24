@@ -43,6 +43,8 @@ def make_report(portfolio, prices):
         report.append((port['name'], port['shares'], f'{diff_value:0.2f}'))
 
     print(report)
+    for r in report:
+        print(r)
 
 def make_report1(portfolio, prices):
     report = []
@@ -51,6 +53,8 @@ def make_report1(portfolio, prices):
         report.append((port['name'], port['shares'], f'{diff_value:0.2f}'))
 
     print(report)
+    for r in report:
+        print(r)
 
 def main():
 
