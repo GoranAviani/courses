@@ -44,8 +44,13 @@ def make_report(portfolio, prices):
 
     print(report)
 
+def make_report1(portfolio, prices):
+    report = []
+    for port in portfolio:
+        diff_value = float(prices[port['name']]) - port['price']
+        report.append((port['name'], port['shares'], diff_value))
 
-
+    print(report)
 
 def main():
 
@@ -56,6 +61,8 @@ def main():
     print(prices)
 
     make_report(portfolio, prices)
+
+    make_report1(portfolio, prices)
 
 
 if __name__ == '__main__':
