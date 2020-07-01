@@ -15,7 +15,7 @@ def main():
         print(n, x)
 
     for n in range(len(data)):
-            print(data[n])
+        print(data[n])
 
 if __name__ == '__main__':
     main()
