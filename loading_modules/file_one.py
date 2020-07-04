@@ -8,7 +8,8 @@ def function_one():
 
 
 if __name__ == "__main__":
-    print("Executed when invoked directly")
+    print("File one executed when invoked directly")
+    function_one()
     file_two.function_two()
 else:
-    print("Executed when imported")
+    print("File one executed when imported")
