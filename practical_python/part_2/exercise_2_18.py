@@ -18,8 +18,13 @@ def read_portfolio(filename):
 
 def main():
     portfolio = read_portfolio('files/portfolio.csv')
-
-
+    print(portfolio
+          )
+    from collections import Counter
+    holdings = Counter()
+    for s in portfolio:
+        holdings[s['name']] += s['shares']
+    print(holdings)
 
 if __name__ == '__main__':
     main()
