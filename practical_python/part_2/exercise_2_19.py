@@ -14,3 +14,7 @@ for x in nums:
 print(squares)
 print(twice)
 
+squares1 = [x*x for x in nums]
+print(squares1)
+twice1 = [2*x for x in nums]
+print(twice1)
