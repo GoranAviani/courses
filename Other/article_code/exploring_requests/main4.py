@@ -6,7 +6,6 @@ def main():
 
     if result.status_code == 200:
         print('Result as JSON: {}\nResult as text: {}' .format(result.json(), result.text))
-
     else:
         print('Something went wrong.')
 
