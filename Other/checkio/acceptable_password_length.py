@@ -7,19 +7,13 @@ The verification condition is:
 """
 
 def main(password = "muchlonger5"):
-    has_d_in_password = False
 
     for d in password:
         if d.isdigit():
-            has_d_in_password = True
-            break
-
-    if has_d_in_password == True:
-        if len(password) > 6:
-            return True
-        else:
-            return False
-
+            if len(password) > 6:
+                return True
+            else:
+                return False
     return False
 
 if __name__ == '__main__':
