@@ -7,11 +7,10 @@ The verification condition is:
 """
 
 def main(password = "muchlonger5"):
-    digs = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
     has_d_in_password = False
 
-    for d in digs:
-        if d in password:
+    for d in password:
+        if d.isdigit():
             has_d_in_password = True
             break
 
