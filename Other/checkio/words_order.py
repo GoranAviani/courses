@@ -30,7 +30,18 @@ words_order('hi world im here', ['wo', 'rld']) == False
 words_order('', ['world', 'here']) == False
 '''
 
+def check_duplicates(words: dict):
+    for word in words:
+        if words.count(word) > 1:
+            return False
+
+    return True
+
 def words_order(text: str, words: list) -> bool:
+    any_duplicates = check_duplicates(words)
+    if not any_duplicates:
+        return False
+
     text_list = text.split()
     result = {}
     for word in words:
@@ -71,7 +82,7 @@ if __name__ == '__main__':
     assert words_order('hi world im here',['world', 'here', 'hi']) == False
     assert words_order('hi world im here',['world', 'im', 'here']) == True
     assert words_order('hi world im here',['world', 'hi', 'here']) == False
-    #assert words_order('hi world im here', ['world', 'world']) == False
+    assert words_order('hi world im here', ['world', 'world']) == False
     #assert words_order('hi world im here',['country', 'world']) == False
     #assert words_order('hi world im here', ['wo', 'rld']) == False
     #assert words_order('', ['world', 'here']) == False
