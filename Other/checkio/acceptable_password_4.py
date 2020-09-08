@@ -22,6 +22,11 @@ is_acceptable_password('1234567') == False
 is_acceptable_password('12345678910') == True
 
 """
+def is_longer_than_ten(password: str):
+    if len(password) >= 10:
+        return True
+    else:
+        return False
 
 def is_long_enough(password: str):
     if len(password) < 6:
@@ -30,6 +35,10 @@ def is_long_enough(password: str):
         return True
 
 def is_acceptable_password(password: str) -> bool:
+    is_longer = is_longer_than_ten(password)
+    if is_longer:
+        return True
+
 
     is_long = is_long_enough(password)
     if not is_long:
