@@ -30,7 +30,7 @@ def is_acceptable_password(password: str) -> bool:
     is_long = is_long_enough(password)
     if not is_long:
         return False
-    
+
     has_digit = False
     has_alpha = False
     for d in password:
