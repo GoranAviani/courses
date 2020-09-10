@@ -12,6 +12,7 @@ is_all_upper('all lower') == False
 is_all_upper('mixed UPPER and lower') == False
 is_all_upper('') == False
 """
+"""
 import re
 def check_for_letter_number(text:str):
     has_letter_number = re.search('[a-zA-Z]', text)
@@ -34,7 +35,26 @@ def is_all_upper(text: str) -> bool:
             return False
 
     return True
+"""
 
+import re
+def check_for_letter_number(text:str):
+    has_letter_number = re.search('[a-zA-Z]', text)
+    if not has_letter_number:
+        return False
+    return True
+
+def is_all_upper(text: str) -> bool:
+    has_letter_number = check_for_letter_number(text)
+    if not has_letter_number:
+        return False
+
+    for letter in text:
+        if letter == letter.upper() or letter in [' ', ',', '-']:
+           pass
+        else:
+            return False
+    return True
 
 if __name__ == '__main__':
 
