@@ -26,6 +26,13 @@ is_acceptable_password('PASSWORD12345') == False
 is_acceptable_password('pass1234word') == True
 """
 
+BLOCKED_WORDS = ['password', 'bad_word_1']
+def check_for_blocked_words(password: str):
+    for word in BLOCKED_WORDS:
+        if word in password:
+            return False
+    return True
+
 def is_longer_than_ten(password: str):
     if len(password) >= 10:
         return True
@@ -39,6 +46,10 @@ def is_long_enough(password: str):
         return True
 
 def is_acceptable_password(password: str) -> bool:
+    has_blocked_word = check_for_blocked_words(password)
+    if has_blocked_word:
+        return False
+
     is_longer = is_longer_than_ten(password)
     if is_longer:
         return True
