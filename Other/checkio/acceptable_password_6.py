@@ -6,7 +6,8 @@ Those are the verification conditions:
     the length should be bigger than 6;
     should contain at least one digit, but it cannot consist of just digits;
     having numbers or containing just numbers does not apply to the password longer than 9.
-    a string should not contain the word "password" in any case.
+    a string should not contain the word "password" in any case;
+    should contain 3 different letters (or digits) even if it is longer than 10
 
 Input: A string.
 
@@ -24,5 +25,6 @@ is_acceptable_password('12345678910') == True
 is_acceptable_password('password12345') == False
 is_acceptable_password('PASSWORD12345') == False
 is_acceptable_password('pass1234word') == True
-
+is_acceptable_password('aaaaaa1') == False
+is_acceptable_password('aaaaaabbbbb') == False
 """
