@@ -29,9 +29,9 @@ is_acceptable_password('pass1234word') == True
 BLOCKED_WORDS = ['password', 'bad_word_1']
 def check_for_blocked_words(password: str):
     for word in BLOCKED_WORDS:
-        if word in password:
-            return False
-    return True
+        if word in password.lower():
+            return True
+    return False
 
 def is_longer_than_ten(password: str):
     if len(password) >= 10:
@@ -76,7 +76,7 @@ def is_acceptable_password(password: str) -> bool:
 if __name__ == '__main__':
 
     # These "asserts" are used for self-checking and not for an auto-testing
-    assert is_acceptable_password('short') == False
+    #assert is_acceptable_password('short') == False
     assert is_acceptable_password('short54') == True
     assert is_acceptable_password('muchlonger') == True
     assert is_acceptable_password('ashort') == False
