@@ -28,8 +28,22 @@ is_acceptable_password('pass1234word') == True
 is_acceptable_password('aaaaaa1') == False
 is_acceptable_password('aaaaaabbbbb') == False
 """
-
 BLOCKED_WORDS = ['password', 'bad_word_1']
+
+def check_for_different_letters(password):
+    all_unique_letters = []
+    for letter in password:
+        if letter not in all_unique_letters:
+            all_unique_letters.append(letter)
+
+    if len(all_unique_letters) > 2:
+        return True
+
+    return False
+
+
+
+
 def check_for_blocked_words(password: str):
     for word in BLOCKED_WORDS:
         if word in password.lower():
@@ -49,6 +63,11 @@ def is_long_enough(password: str):
         return True
 
 def is_acceptable_password(password: str) -> bool:
+    has_different_letters = check_for_different_letters(password)
+    if not has_different_letters:
+        return False
+
+
     has_blocked_word = check_for_blocked_words(password)
     if has_blocked_word:
         return False
