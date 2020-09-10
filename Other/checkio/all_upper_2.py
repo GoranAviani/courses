@@ -17,7 +17,7 @@ def is_all_upper(text: str) -> bool:
         return False
 
     for letter in text:
-        if letter == letter.upper():
+        if letter.isupper() or letter in [' ', ',', '-']:
             pass
         else:
             return False
