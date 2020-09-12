@@ -51,7 +51,13 @@ def is_family(tree):
         father = tree[0][0]
         for pairs in tree:
             if pairs[0] != father:
-                return False
+                #Check if granfather
+                for pairs_granpa in tree:
+                    if pairs[0] == pairs_granpa[1]:
+                        #pairs_granpa[1] is son
+                        #pairs[0] is grandpa
+                        return True
+                return True
 
     return True
 
