@@ -18,12 +18,17 @@ from typing import Iterable
 
 def is_ascending(items: Iterable[int]) -> bool:
     # your code here
+    for number in range(0, len(items)-1):
+        if number+1 <= len(items)-1:
+            if items[number] < items[number+1]:
+                pass
+            else:
+                return False
+
     return True
 
 
 if __name__ == '__main__':
-    print("Example:")
-    print(is_ascending([-5, 10, 99, 123456]))
 
     # These "asserts" are used for self-checking and not for an auto-testing
     assert is_ascending([-5, 10, 99, 123456]) == True
