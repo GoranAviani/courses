@@ -47,7 +47,13 @@ is_family([
 def is_family(tree):
     if len(tree) == 1 and tree[0][0] != tree[0][1]:
         return True
-    return False
+    else:
+        father = tree[0][0]
+        for pairs in tree:
+            if pairs[0] != father:
+                return False
+
+    return True
 
 if __name__ == "__main__":
     #These "asserts" using only for self-checking and not necessary for auto-testing
