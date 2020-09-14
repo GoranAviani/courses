@@ -30,20 +30,20 @@ def date_time(date_and_time: str) -> str:
     time = time.split(':')
 
     day = date[0]
-    day = day.replace('0', '')
+    if day[:1] == '0':
+        day = day[1:]
     month = date[1]
-    month = month.replace('0', '')
+    if month[:1] == '0':
+        month = month[1:]
     year = date[2]
 
     hour = time[0]
     minutes = time[1]
 
-    hour = hour.replace('0', '')
-    if not hour:
-        hour = '0'
-    minutes = minutes.replace('0', '')
-    if not minutes:
-        minutes = '0'
+    if hour[:1] == '0':
+        hour = hour[1:]
+    if minutes[:1] == '0':
+        minutes = minutes[1:]
 
     date_result = '{} {} {} year' .format(day, MONTH_NUMBER[month], year)
     if hour == '1':
@@ -62,7 +62,7 @@ def date_time(date_and_time: str) -> str:
 if __name__ == '__main__':
 
     #These "asserts" using only for self-checking and not necessary for auto-testing
-    assert date_time("01.01.2000 00:00") == "1 January 2000 year 0 hours 0 minutes", "Millenium"
-    assert date_time("09.05.1945 06:30") == "9 May 1945 year 6 hours 30 minutes", "Victory"
-    assert date_time("20.11.1990 03:55") == "20 November 1990 year 3 hours 55 minutes", "Somebody was born"
+    assert date_time("01.01.2000 00:00") == "1 January 2000 year 0 hours 0 minutes"
+    assert date_time("09.05.1945 06:30") == "9 May 1945 year 6 hours 30 minutes"
+    assert date_time("20.11.1990 03:55") == "20 November 1990 year 3 hours 55 minutes"
     print("Coding complete? Click 'Check' to earn cool rewards!")
