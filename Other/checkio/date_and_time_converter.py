@@ -21,6 +21,12 @@ MONTH_NUMBER = {'1': 'January', '2': 'February', '3': 'March', '4': 'April', '5'
                 '6': 'June', '7': 'July', '8': 'August', '9': 'September', '10': 'October',
                 '11': 'November', '12': 'December'}
 
+def remove_leading_zero(text: str):
+    if text[:1] == '0':
+        return text[1:]
+    return text
+
+
 def date_time(date_and_time: str) -> str:
     date_and_time_list = date_and_time.split(' ')
     date = date_and_time_list[0]
@@ -30,20 +36,16 @@ def date_time(date_and_time: str) -> str:
     time = time.split(':')
 
     day = date[0]
-    if day[:1] == '0':
-        day = day[1:]
+    day = remove_leading_zero(day)
     month = date[1]
-    if month[:1] == '0':
-        month = month[1:]
+    month = remove_leading_zero(month)
     year = date[2]
 
     hour = time[0]
     minutes = time[1]
 
-    if hour[:1] == '0':
-        hour = hour[1:]
-    if minutes[:1] == '0':
-        minutes = minutes[1:]
+    hour = remove_leading_zero(hour)
+    minutes = remove_leading_zero(minutes)
 
     date_result = '{} {} {} year' .format(day, MONTH_NUMBER[month], year)
     if hour == '1':
