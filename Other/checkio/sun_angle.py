@@ -30,7 +30,7 @@ def sun_angle(time: str):
     sunset = datetime.strptime(sunset, '%H:%M')
     midnight_00 = datetime.strptime('00:00', '%H:%M')
     midnight_24 = datetime.strptime('23:59', '%H:%M')
-    if (time > sunset and time < midnight_24) or (time < sunrise and time > midnight_00):
+    if (time > sunset and time < midnight_24) or (time > midnight_00 and time < sunrise):
         return "I don't see the sun!"
 
 
