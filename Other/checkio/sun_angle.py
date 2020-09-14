@@ -38,7 +38,7 @@ def sun_angle(time: str):
     time_starting_from_6 = time_starting_from_6.split(':')
     time_in_minutes = int(time_starting_from_6[0]) * 60 + int(time_starting_from_6[1])
 
-    return time
+    return time_in_minutes * 0.25
 
 if __name__ == '__main__':
 
