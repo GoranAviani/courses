@@ -33,12 +33,16 @@ def sun_angle(time: str):
     if (time > sunset and time < midnight_24) or (time > midnight_00 and time < sunrise):
         return "I don't see the sun!"
 
+    time_starting_from_6 = time - sunrise
+    time_starting_from_6 = str(time_starting_from_6)
+    time_starting_from_6 = time_starting_from_6.split(':')
+    time_in_minutes = int(time_starting_from_6[0]) * 60 + int(time_starting_from_6[1])
 
     return time
 
 if __name__ == '__main__':
 
     #These "asserts" using only for self-checking and not necessary for auto-testing
-    #assert sun_angle("07:00") == 15
+    assert sun_angle("07:00") == 15
     assert sun_angle("01:23") == "I don't see the sun!"
     print("Coding complete? Click 'Check' to earn cool rewards!")
