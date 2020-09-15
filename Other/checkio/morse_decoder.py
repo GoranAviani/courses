@@ -1,7 +1,9 @@
 '''
 Your task is to decrypt the secret message using the Morse code.
-The message will consist of words with 3 spaces between them and 1 space between each letter of each word.
-If the decrypted text starts with a letter then you'll have to print this letter in uppercase.
+The message will consist of words with 3 spaces between them and 1 space between
+ each letter of each word.
+If the decrypted text starts with a letter then you'll have to print this
+letter in uppercase.
 
 example
 Input: The secret message.
@@ -25,23 +27,22 @@ MORSE = {'.-':    'a', '-...':  'b', '-.-.':  'c',
 def morse_decoder(code):
     #replace this for solution
     code_saved_in_lists = []
-    words= code.split('   ')
+    words = code.split('   ')
     for word in words:
         word = word.split(' ')
         code_saved_in_lists.append(word)
 
-
-    test = code_saved_in_lists
-    test1 = code_saved_in_lists
     result = ''
     for word_code in code_saved_in_lists:
         result_word = ''
         for letter_code in word_code:
             result_word += MORSE[letter_code]
         result += result_word
-        if code_saved_in_lists.index(word_code) != len(code_saved_in_lists):
+
+        if code_saved_in_lists.index(word_code) != len(code_saved_in_lists)-1:
             result += ' '
 
+    result_with_capital_letter = ''
     if result[:1].isalpha():
         result_with_capital_letter = result[:1].upper() + result[1:]
 
@@ -49,7 +50,7 @@ def morse_decoder(code):
 
 
 if __name__ == '__main__':
-
+    print(morse_decoder("... --- -- .   - . -..- -"))
     #These "asserts" using only for self-checking and not necessary for auto-testing
     assert morse_decoder("... --- -- .   - . -..- -") == "Some text"
     assert morse_decoder("..--- ----- .---- ---..") == "2018"
