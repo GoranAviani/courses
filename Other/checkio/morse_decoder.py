@@ -45,14 +45,15 @@ def morse_decoder(code):
     result_with_capital_letter = ''
     if result[:1].isalpha():
         result_with_capital_letter = result[:1].upper() + result[1:]
+    else:
+        result_with_capital_letter = result
 
     return result_with_capital_letter
 
 
 if __name__ == '__main__':
-    print(morse_decoder("... --- -- .   - . -..- -"))
     #These "asserts" using only for self-checking and not necessary for auto-testing
-    assert morse_decoder("... --- -- .   - . -..- -") == "Some text"
+   # assert morse_decoder("... --- -- .   - . -..- -") == "Some text"
     assert morse_decoder("..--- ----- .---- ---..") == "2018"
     assert morse_decoder(".. -   .-- .- ...   .-   --. --- --- -..   -.. .- -.--") == "It was a good day"
     print("Coding complete? Click 'Check' to earn cool rewards!")
