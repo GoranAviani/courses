@@ -42,7 +42,10 @@ def morse_decoder(code):
         if code_saved_in_lists.index(word_code) != len(code_saved_in_lists):
             result += ' '
 
-    return result
+    if result[:1].isalpha():
+        result_with_capital_letter = result[:1].upper() + result[1:]
+
+    return result_with_capital_letter
 
 
 if __name__ == '__main__':
