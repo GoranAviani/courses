@@ -13,12 +13,12 @@ end_zeros(101) == 0
 '''
 
 def int_to_list_of_string(function):
-    def fix_int(x):
+    def convert_int_to_list_str(x):
         x_str = str(x)
         x_lst = list(x_str)
         return function(x_lst)
 
-    return fix_int
+    return convert_int_to_list_str
 
 @int_to_list_of_string
 def end_zeros(num: str) -> int:
