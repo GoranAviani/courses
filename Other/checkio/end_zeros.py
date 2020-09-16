@@ -16,7 +16,7 @@ def end_zeros(num: int) -> int:
     # your code here
     result = 0
     num = str(num)
-    num = num.split()
+    num = list(num)
     for x in range(len(num)-1, -1, -1):
         if num[x] == '0':
             result += 1
@@ -27,8 +27,8 @@ def end_zeros(num: int) -> int:
 
 if __name__ == '__main__':
     # These "asserts" are used for self-checking and not for an auto-testing
-    #assert end_zeros(0) == 1
-    #assert end_zeros(1) == 0
+    assert end_zeros(0) == 1
+    assert end_zeros(1) == 0
     assert end_zeros(10) == 1
     assert end_zeros(101) == 0
     assert end_zeros(245) == 0
