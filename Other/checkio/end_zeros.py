@@ -12,7 +12,7 @@ end_zeros(10) == 1
 end_zeros(101) == 0
 '''
 
-def int_to_list_of_string(function):
+def int_to_list_of_string(function) -> list:
     def convert_int_to_list_str(x):
         x_str = str(x)
         x_lst = list(x_str)
