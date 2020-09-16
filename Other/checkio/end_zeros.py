@@ -12,7 +12,16 @@ end_zeros(10) == 1
 end_zeros(101) == 0
 '''
 
-def end_zeros(num: int) -> int:
+def int_to_list_of_string(function):
+    def fix_int(x):
+        x_str = str(x)
+        x_lst = list(x_str)
+        return function(x_lst)
+
+    return fix_int
+
+@int_to_list_of_string
+def end_zeros(num: str) -> int:
     '''
     Converting int to a list of str characters, then reversing the for loop to start form the end
     and start counting zeros. On first chat that is not zero the result is returned. If all chars were zeros
@@ -20,8 +29,7 @@ def end_zeros(num: int) -> int:
     '''
     # your code here
     result = 0
-    num = str(num)
-    num = list(num)
+
     for x in range(len(num)-1, -1, -1):
         if num[x] == '0':
             result += 1
