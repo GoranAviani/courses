@@ -14,6 +14,7 @@ def divide(x, y):
 def main():
     result = divide(6, 3)
     print(result)
-
+    result = divide(6, 0)
+    print(result)
 if __name__ == '__main__':
     main()
