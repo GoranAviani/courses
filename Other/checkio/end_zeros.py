@@ -13,6 +13,11 @@ end_zeros(101) == 0
 '''
 
 def end_zeros(num: int) -> int:
+    '''
+    Converting int to a list of str characters, then reversing the for loop to start form the end
+    and start counting zeros. On first chat that is not zero the result is returned. If all chars were zeros
+    funtion returns result in the end
+    '''
     # your code here
     result = 0
     num = str(num)
