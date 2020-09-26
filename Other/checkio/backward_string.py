@@ -18,8 +18,11 @@ backward_string('123456789') == '987654321'
 """
 
 def backward_string(val: str) -> str:
-    # your code here
-    return None
+    result = ''
+    val = list(val)
+    for x in range(0, len(val), -1):
+        result += x
+    return result
 
 
 if __name__ == '__main__':
