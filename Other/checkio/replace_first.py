@@ -20,9 +20,8 @@ from typing import Iterable
 
 
 def replace_first(items: list) -> Iterable:
-    result = []
     if items:
-        result.extend(items[1:len(items)])
+        result = (items[1:len(items)])
         result.append(items[0])
         return result
     else:
