@@ -17,8 +17,10 @@ is_all_upper('') == True
 """
 
 def is_all_upper(text: str) -> bool:
-    # your code here
-    return False
+    for x in text:
+        if x.islower():
+            return False
+    return True
 
 
 if __name__ == '__main__':
