@@ -20,9 +20,13 @@ from typing import Iterable
 
 
 def replace_first(items: list) -> Iterable:
-    # your code here
-    return items
-
+    result = []
+    if items:
+        result.extend(items[1:len(items)])
+        result.append(items[0])
+        return result
+    else:
+        return []
 
 if __name__ == '__main__':
     print("Example:")
