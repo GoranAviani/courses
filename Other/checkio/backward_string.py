@@ -18,10 +18,7 @@ backward_string('123456789') == '987654321'
 """
 
 def backward_string(val: str) -> str:
-    result = ''
-    val = list(val)
-    for x in range(0, len(val)):
-        result += val.pop()
+    result = val[::-1]
     return result
 
 
