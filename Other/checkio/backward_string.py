@@ -20,8 +20,8 @@ backward_string('123456789') == '987654321'
 def backward_string(val: str) -> str:
     result = ''
     val = list(val)
-    for x in range(0, len(val), -1):
-        result += x
+    for x in range(len(val)-1, -1, -1):
+        result += val[x]
     return result
 
 
