@@ -18,7 +18,16 @@ max_digit(10000) == 1"""
 
 def max_digit(number: int) -> int:
     # your code here
-    return 0
+    result = []
+    for x in (str(number)):
+        result.append(int(x))
+
+    biggest = result[0]
+    for n in result:
+        if n > biggest:
+            biggest = n
+
+    return biggest
 
 
 if __name__ == '__main__':
