@@ -20,8 +20,15 @@ Precondition: 0<=len(str)<=100
 
 def split_pairs(a):
     # your code here
-    return None
+    if len(a) % 2 != 0:
+        a += '_'
 
+    result = []
+    counter = 0
+    for x in range(2, len(a)+1, 2):
+        result.append(a[counter:x])
+        counter += 2
+    return result
 
 if __name__ == '__main__':
     print("Example:")
