@@ -42,8 +42,8 @@ def frequency_sort(list_to_sort):
 
 def main():
     # These "asserts" are used for self-checking and not for testing
-    #assert frequency_sort([4, 6, 2, 2, 6, 4, 4, 4]) == [4, 4, 4, 4, 6, 6, 2, 2]
-    #assert frequency_sort(['bob', 'bob', 'carl', 'alex', 'bob']) == ['bob', 'bob', 'bob', 'carl', 'alex']
+    assert frequency_sort([4, 6, 2, 2, 6, 4, 4, 4]) == [4, 4, 4, 4, 6, 6, 2, 2]
+    assert frequency_sort(['bob', 'bob', 'carl', 'alex', 'bob']) == ['bob', 'bob', 'bob', 'carl', 'alex']
     assert frequency_sort(['bob', 'bob', 'carl', 'carl', 'alex', 'bob', 'carl']) == ['bob', 'bob', 'bob', 'carl',
                                                                                      'carl', 'carl', 'alex']
     assert frequency_sort(['carl', 'bob', 'bob', 'carl', 'alex']) == ['carl', 'carl', 'bob', 'bob', 'alex']
