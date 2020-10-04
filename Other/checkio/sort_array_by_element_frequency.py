@@ -17,6 +17,12 @@ Precondition: elements can be ints or strings
 '''
 
 def frequency_sort(list_to_sort):
+    """
+    for every element in list_to_sort:
+    save its frequency in one dict and order they are coming in (only once in another dict)
+
+    """
+
     result = []
     frequency_of_items = {}
     order_of_items = {}
@@ -26,16 +32,14 @@ def frequency_sort(list_to_sort):
             frequency_of_items[element] = 1
         else:
             frequency_of_items[element] += 1
+
         if element not in order_of_items:
             order_counter += 1
             order_of_items[element] = order_counter
 
-    test = frequency_of_items
-    test1 = order_of_items
-    test2 = 2
     for k, v in frequency_of_items.items():
         sub_result = []
-        for x in range(0,v):
+        for x in range(0, v):
             sub_result.append(k)
         result.extend(sub_result)
     return result
