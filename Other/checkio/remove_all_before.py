@@ -19,16 +19,23 @@ from typing import Iterable
 def remove_all_before(items: list, border: int) -> Iterable:
 
     result = []
+    start_saving = False
     for x in items:
         if x == border:
+            start_saving = True
+
+        if start_saving:
             result.append(x)
 
-    return result
+    if not result:
+        return items
+    else:
+        return result
 
 
 if __name__ == '__main__':
-    print("Example:")
-    print(list(remove_all_before([1, 2, 3, 4, 5], 3)))
+    #print("Example:")
+    #print(list(remove_all_before([1, 2, 3, 4, 5], 3)))
 
     # These "asserts" are used for self-checking and not for an auto-testing
     assert list(remove_all_before([1, 2, 3, 4, 5], 3)) == [3, 4, 5]
