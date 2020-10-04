@@ -18,13 +18,18 @@ beginning_zeros('012345679') == 1
 beginning_zeros('0000') == 4
 """
 def beginning_zeros(number: str) -> int:
-    # your code here
-    return 0
 
+    result = 0
+    number = list(number)
+    for n in number:
+        if int(n) != 0:
+            return result
+        result += 1
+    return result
 
 if __name__ == '__main__':
-    print("Example:")
-    print(beginning_zeros('100'))
+    #print("Example:")
+    #print(beginning_zeros('100'))
 
     # These "asserts" are used for self-checking and not for an auto-testing
     assert beginning_zeros('100') == 0
