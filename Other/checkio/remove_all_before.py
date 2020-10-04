@@ -17,8 +17,13 @@ from typing import Iterable
 
 
 def remove_all_before(items: list, border: int) -> Iterable:
-    # your code here
-    return items
+
+    result = []
+    for x in items:
+        if x == border:
+            result.append(x)
+
+    return result
 
 
 if __name__ == '__main__':
