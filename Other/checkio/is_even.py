@@ -23,9 +23,7 @@ Precondition: both given ints should be between -1000 and 1000
 """
 
 def is_even(num: int) -> bool:
-    # your code here
-    return False
-
+    return True if num % 2 == 0 else False
 
 if __name__ == '__main__':
     print("Example:")
