@@ -22,16 +22,31 @@ both strings are the same size
 """
 
 def isometric_strings(str1: str, str2: str) -> bool:
-    # your code here
-    return None
+    if len(str1) != len(str2):
+        return False
 
+    rules = {}
+    str1 = list(str1)
+    str2 = list(str2)
+    counter = -1
+    for letter in str1:
+        counter += 1
+        if letter not in rules:
+            rules[letter] = str2[counter]
+        else:
+            if rules[letter] == str2[counter]:
+                pass
+            else:
+                return False
+
+    return True
 
 if __name__ == '__main__':
-    print("Example:")
-    print(isometric_strings('add', 'egg'))
+    #print("Example:")
+    #print(isometric_strings('add', 'egg'))
 
     # These "asserts" are used for self-checking and not for an auto-testing
-    assert isometric_strings('add', 'egg') == True
+    #assert isometric_strings('add', 'egg') == True
     assert isometric_strings('foo', 'bar') == False
     assert isometric_strings('', '') == True
     assert isometric_strings('all', 'all') == True
