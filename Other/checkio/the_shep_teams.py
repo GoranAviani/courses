@@ -36,19 +36,23 @@ Precondition:
 
 
 def two_teams(sailors):
-    #replace this for solution
-    return [
-        [],
-        []
-    ]
+    team1 = []
+    team2 = []
+
+    for name, age in sailors.items():
+        if age <= 20 or age >= 40:
+            team1.append(name)
+        else:
+            team2.append(name)
+
+    return [team1, team2]
 
 if __name__ == '__main__':
-    print("Example:")
-    print(two_teams({'Smith': 34, 'Wesson': 22, 'Coleman': 45, 'Abrahams': 19}))
+    #print("Example:")
+    #print(two_teams({'Smith': 34, 'Wesson': 22, 'Coleman': 45, 'Abrahams': 19}))
 
     #These "asserts" using only for self-checking and not necessary for auto-testing
-    assert two_teams({
-        'Smith': 34,
+    assert two_teams({'Smith': 34,
         'Wesson': 22,
         'Coleman': 45,
         'Abrahams': 19}) == [
