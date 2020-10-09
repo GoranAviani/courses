@@ -37,6 +37,7 @@ def is_long_enough(func):
     return check
 
 @is_long_enough
+
 def is_acceptable_password(password: str) -> bool:
     is_longer = is_longer_than_ten(password)
     if is_longer:
