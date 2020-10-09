@@ -31,12 +31,12 @@ def is_longer_than_ten(func):
     return check
 
 def is_long_enough(func):
-    def check(password: str):
+    def check1(password: str):
         if len(password) < 6:
             return False
         else:
             return func(password)
-    return check
+    return check1
 
 @is_longer_than_ten
 @is_long_enough
@@ -57,8 +57,8 @@ def is_acceptable_password(password: str) -> bool:
 
 
 if __name__ == '__main__':
-    print("Example:")
-    print(is_acceptable_password('short'))
+   # print("Example:")
+   # print(is_acceptable_password('short'))
 
     # These "asserts" are used for self-checking and not for an auto-testing
     assert is_acceptable_password('short') == False
