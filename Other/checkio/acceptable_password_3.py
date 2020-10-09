@@ -19,17 +19,16 @@ is_acceptable_password('sh5') == False
 is_acceptable_password('1234567') == False
 """
 
-def is_long_enough(password: str):
-    if len(password) < 6:
-        return False
-    else:
-        return True
+def is_long_enough(func):
+    def check(password: str):
+        if len(password) < 6:
+            return False
+        else:
+            return func(password)
+    return check
 
+@is_long_enough
 def is_acceptable_password(password: str) -> bool:
-
-    is_long = is_long_enough(password)
-    if not is_long:
-        return False
 
     has_digit = False
     has_alpha = False

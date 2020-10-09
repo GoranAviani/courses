@@ -28,12 +28,15 @@ def is_longer_than_ten(password: str):
     else:
         return False
 
-def is_long_enough(password: str):
-    if len(password) < 6:
-        return False
-    else:
-        return True
+def is_long_enough(func):
+    def check(password: str):
+        if len(password) < 6:
+            return False
+        else:
+            return func(password)
+    return check
 
+@is_long_enough
 def is_acceptable_password(password: str) -> bool:
     is_longer = is_longer_than_ten(password)
     if is_longer:
