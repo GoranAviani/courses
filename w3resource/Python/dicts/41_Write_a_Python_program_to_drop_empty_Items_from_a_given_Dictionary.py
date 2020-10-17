@@ -8,9 +8,8 @@ New Dictionary after dropping empty items:
 
 dict1 = {'c1': 'Red', 'c2': 'Green', 'c3': None}
 
-result = {}
-for x, y in dict1.items():
-    if y != None:
-        result[x] = y
+
+result = {x: y for x, y in dict1.items() if y != None}
+
 
 print(result)
