@@ -7,6 +7,8 @@ student_details= [
   {'id' : 3, 'subject' : 'math', 'V' : 75, 'VI' : 86}
 ]
 
-result = {}
+result = []
 for st in student_details:
-  temp_res = {}
+  result.append({'id': st['id'], 'result':  (st['V'] + st['VI'])/2})
+
+print(result)
