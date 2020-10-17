@@ -4,8 +4,8 @@ Sample dictionary: {'key1': 1, 'key2': 3, 'key3': 2}, {'key1': 1, 'key2': 2}
 Expected output: key1: 1 is present in both x and y
 """
 
-list1 = {'key1': 1, 'key2': 3, 'key3': 2}
-list2 = {'key1': 1, 'key2': 2}
+list1 = {'key1': 1, 'key2': 3, 'key3': 2, 'key4': 1}
+list2 = {'key1': 1, 'key2': 2, 'key3': 2}
 
 result = []
 for key1, value1 in list1.items():
