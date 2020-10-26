@@ -8,8 +8,11 @@ Extras:
 """
 
 user_input = input("How old are you?")
+user_input_2 = input("How many times do you want the message to be printed out?")
 user_input = int(user_input)
+user_input_2 = int(user_input_2)
 year = 2020
 year_diff = 100 - user_input
 result = year + year_diff
-print("You will be 100 years on in {}". format(result))
+for x in range(0, user_input_2):
+    print("You will be 100 years on in {}". format(result))
