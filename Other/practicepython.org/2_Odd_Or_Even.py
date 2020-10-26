@@ -6,11 +6,11 @@ Extras:
     Ask the user for two numbers: one number to check (call it num) and one number to divide by (check). If check divides evenly into num, tell that to the user. If not, print a different appropriate message.
 """
 def check_if_multiple_of_4(func):
-    def checking():
+    def checking(user_input):
         if user_input % 4 == 0:
             print("multiple of 4!")
         else:
-            check_if_even(user_input)
+            return func(user_input)
     checking
 
 @check_if_multiple_of_4
