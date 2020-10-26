@@ -8,6 +8,7 @@ Extras:
 """
 
 user_input = input("How old are you?")
+user_input = int(user_input)
 year = 2020
 year_diff = 100 - user_input
 result = year + year_diff
