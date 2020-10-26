@@ -11,7 +11,7 @@ def check_if_multiple_of_4(func):
             print("multiple of 4!")
         else:
             check_if_even(user_input)
-    checking(func)
+    checking
 
 @check_if_multiple_of_4
 def check_if_even(user_input):
