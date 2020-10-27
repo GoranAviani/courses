@@ -2,6 +2,11 @@ number_list=list(range(1,51))
 print(number_list)
 
 divided_by_7=[number for number in number_list if number % 7 == 0]
+#ovo ti znaci ovo:
+for number in number_list:
+    if number % 7 == 0:
+        divided_by_7.append(number)
+
 
 odd_new=[]
 even_new=[]
