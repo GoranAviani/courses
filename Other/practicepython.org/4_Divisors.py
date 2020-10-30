@@ -5,3 +5,10 @@ the divisors of that number. (If you don’t know what a divisor is, it is a num
  has no remainder.)
 """
 
+user_input = input (" enter a num: ")
+user_input = int(user_input)
+list_to_search = []
+for x in range(0, user_input +1):
+    list_to_search.append(x)
+
+print (list_to_search)
