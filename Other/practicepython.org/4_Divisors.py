@@ -5,8 +5,14 @@ the divisors of that number. (If you don’t know what a divisor is, it is a num
  has no remainder.)
 """
 
+result = []
 user_input = input (" enter a num: ")
 user_input = int(user_input)
-list_to_search = list(range(0, user_input + 1))
+list_to_search = list(range(1, user_input + 1))
 
 print(list_to_search)
+for x in list_to_search:
+    if user_input % x == 0:
+        result.append(x)
+
+print(result)
