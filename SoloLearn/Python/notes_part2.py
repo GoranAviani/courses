@@ -19,6 +19,7 @@ print("Finished")
 file.close()
 
 
+
 ##Result: >>>
 #Reading initial contents
 #some initial text
