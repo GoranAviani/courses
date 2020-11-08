@@ -57,3 +57,11 @@ if any([i % 2 == 0 for i in nums]):
 
 for v in enumerate(nums):
    print(v)
+
+
+filename = input("Enter a filename: ")
+
+with open(filename) as f:
+   text = f.read()
+
+print(text)
