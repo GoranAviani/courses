@@ -14,3 +14,8 @@ some_list = []
 
 def impure(arg):
   some_list.append(arg)
+
+  y = x ** 2
+  z = x + y
+  return z
+
