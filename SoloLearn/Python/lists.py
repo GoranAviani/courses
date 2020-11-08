@@ -65,3 +65,11 @@ with open(filename) as f:
    text = f.read()
 
 print(text)
+
+
+def count_char(text, char):
+  count = 0
+  for c in text:
+    if c == char:
+      count += 1
+  return count
