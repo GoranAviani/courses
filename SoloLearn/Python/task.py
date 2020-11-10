@@ -58,3 +58,8 @@ def print_text():
 
 decorated = decor(print_text)
 decorated()
+
+def print_text():
+  print("Hello world!")
+
+print_text = decor(print_text)
