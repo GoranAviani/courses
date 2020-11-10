@@ -21,10 +21,10 @@ for i in countdown():
   print(i)
 
 
-  def infinite_sevens():
-    while True:
-      yield 7
+def infinite_sevens():
+  while True:
+    yield 7
 
 
-  for i in infinite_sevens():
-    print(i)
+for i in infinite_sevens():
+  print(i)
