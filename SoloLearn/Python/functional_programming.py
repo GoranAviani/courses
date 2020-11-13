@@ -104,6 +104,12 @@ for i in count(3):
   if i >=11:
     break
 
+    from itertools import accumulate, takewhile
+
+    nums = list(accumulate(range(8)))
+    print(nums)
+    print(list(takewhile(lambda x: x <= 6, nums)))
+
 
 
 
