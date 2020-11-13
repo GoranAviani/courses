@@ -97,6 +97,13 @@ b = {0, 3, 4, 5}
 print(a & b)
 
 
+rom itertools import count
+
+for i in count(3):
+  print(i)
+  if i >=11:
+    break
+
 
 
 
