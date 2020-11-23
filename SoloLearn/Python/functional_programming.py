@@ -114,7 +114,7 @@ for i in count(3):
 
     letters = ("A", "B")
     print(list(product(letters, range(2))))
-    print(list(permutations(letters)))
+    print(list(permutations(letters))) 
 
 
 
