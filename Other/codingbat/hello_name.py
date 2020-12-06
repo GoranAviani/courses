@@ -15,3 +15,5 @@ def hello_name(name):
 if __name__ == '__main__':
     result = hello_name(1)
     print(result)
+    result = hello_name("Goran")
+    print(result)
