@@ -1,0 +1,15 @@
+#53. Write a Python program to create a list with infinite elements.
+
+def fun():
+
+    isTrue = False
+    result = []
+    while isTrue == False:
+        result.append([])
+        print(result)
+
+if __name__ == "__main__":
+    # These "asserts" are used for self-checking and not for testing
+    fun()
+
+    print('Testing completed!')

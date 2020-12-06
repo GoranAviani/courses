@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
+	<script type="text/babel">
+		
+		var course = new Map();
+		course.set('react', {description: 'ui'});
+		course.set('jest', {description: 'testing'});
+
+		//console.log(course);
+		//console.log(course.react);
+		console.log(course.get('react'));
+
+		var details = new Map([
+			[new Date(), 'today'],
+			['items', [1, 2]]
+		]);
+
+		console.log(details.size);
+
+		details.forEach(function(item) {
+			console.log(item);
+		});
+
+	</script>
+	<title>Maps</title>
+</head>
+<body>
+</body>	
+</html>
