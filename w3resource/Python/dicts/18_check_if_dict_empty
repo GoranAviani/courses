@@ -1,0 +1,9 @@
+#18. Write a Python program to check a dictionary is empty or not.
+
+dict1={}
+
+if bool(dict) == False:
+    print("empty")
+
+
+    
