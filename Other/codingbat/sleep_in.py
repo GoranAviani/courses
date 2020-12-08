@@ -7,9 +7,9 @@ def sleep_in(weekday, vacation):
 
 
 def main():
-    sleep_in(False, False) → True
-    sleep_in(True, False) → False
-    sleep_in(False, True) → True
+    sleep_in(False, False)
+    sleep_in(True, False)
+    sleep_in(False, True)
 
 
 
