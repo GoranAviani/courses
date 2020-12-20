@@ -15,3 +15,5 @@ def power(x, y):
 
 
 print(power(2, 3))
+a = (lambda x:x*(x+1))(6)
+
