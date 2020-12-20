@@ -16,7 +16,7 @@ def power(x, y):
 
 print(power(2, 3))
 a = (lambda x:x*(x+1))(6)
-
+"""
 Classes
 
 
@@ -29,6 +29,8 @@ You can use the same class as a blueprint for creating multiple different object
 
 Classes are created using the keyword class and an indented block, which contains class methods (which are functions).
 Below is an example of a simple class and its objects.
+"""
+
 class Cat:
   def __init__(self, color, legs):
     self.color = color
