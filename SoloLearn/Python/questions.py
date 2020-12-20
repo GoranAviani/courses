@@ -40,7 +40,7 @@ felix = Cat("ginger", 4)
 rover = Cat("dog-colored", 4)
 stumpy = Cat("brown", 3)
 
-lass Dog:
+class Dog:
     def __init__(self, name, color):
         self.name = name
         self.color = color
