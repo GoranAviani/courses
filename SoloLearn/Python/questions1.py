@@ -47,7 +47,7 @@ import random
 class VagueList:
     def __init__(self, cont):
         self.cont = cont
-
+r ffdvg d tr f  h  ,
     def __getitem__(self, index):
         return self.cont[index + random.randint(-1, 1)]
 
